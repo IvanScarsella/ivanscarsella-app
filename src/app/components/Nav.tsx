@@ -5,6 +5,8 @@ import { Disclosure, Menu, Transition, Switch } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 const navigation = [
   { name: 'Inicio', href: '/', current: true },
@@ -19,7 +21,8 @@ function classNames(...classes: any[]) {
 
 export default function Nav() {
   const router = useRouter()
-
+  const pathname = usePathname()
+  console.log(pathname)
   const [enabled, setEnabled] = useState(false)
 
   return (
@@ -45,20 +48,20 @@ export default function Nav() {
                   <p>Logo</p>
                 </div>
                 <div className="flex justify-between items-center max-container max-sm:hidden">
-                  <div className="flex space-x-20">
+                  <div className="flex space-x-20 font-palanquin">
                     {navigation.map((item) => (
+                      // <Link key={item.name} href={item.href}>
                       <a
-                        key={item.name}
-                        href={item.href}
-                        className={classNames(
-                          item.current ? 'bg-red-700 text-white' : 'text-gray-300 hover:bg-red-500 hover:text-white',
-                          'rounded-md px-3 py-2 text-sm font-medium'
-                        )}
+                        className={`${pathname === item.href
+                            ? 'bg-red-700 text-white'
+                            : 'text-gray-300 hover:bg-gray-700 hover:text-white'
+                          } px-3 py-2 rounded-md text-sm font-medium cursor-pointer`}
                         aria-current={item.current ? 'page' : undefined}
                         onClick={() => router.push(item.href)}
                       >
                         {item.name}
                       </a>
+                      // </Link>
                     ))}
                   </div>
                 </div>

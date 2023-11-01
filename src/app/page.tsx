@@ -6,7 +6,7 @@ import Principal from "./sections/Principal"
 
 export default function Home() {
   return (
-    <main className="bg-slate-200 dark:bg-slate-700">
+    <main>
       <Nav />
       <section className="xl:padding-1 wide:padding-r padding-b">
         <Principal />
@@ -14,7 +14,7 @@ export default function Home() {
       <section>
         <Carousel />
       </section>
-      <section>
+      <section className="flex justify-center">
         <Contact />
       </section>
       <section>
