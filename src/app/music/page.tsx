@@ -1,5 +1,5 @@
 import Nav from '../components/Nav'
-import CoversSection from './musicSections/coversSection'
+import CoversSection from './musicSections/CoversSection'
 
 const page = () => {
   return (

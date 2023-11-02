@@ -22,7 +22,7 @@ function classNames(...classes: any[]) {
 export default function Nav() {
   const router = useRouter()
   const pathname = usePathname()
-  console.log(pathname)
+
   const [enabled, setEnabled] = useState(false)
 
   return (
