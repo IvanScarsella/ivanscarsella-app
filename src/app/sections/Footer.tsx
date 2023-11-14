@@ -43,7 +43,7 @@ const socialMedia = [
 const Footer = () => {
   return (
     <footer
-      className="max-container bg-gray-900 text-gray-300 "
+      className="w-full bg-gray-900 text-gray-300 "
     >
       <div className="flex justify-between items-start gap-20 flex-wrap max-lg:flex-col">
 

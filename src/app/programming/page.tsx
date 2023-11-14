@@ -1,5 +1,5 @@
 import Nav from '../components/Nav';
-import CoversSection from './musicSections/CoversSection';
+import ProjectsSection from './programmingSections/ProjectsSection';
 import Footer from '../sections/Footer';
 
 const page = () => {
@@ -7,7 +7,7 @@ const page = () => {
     <>
       <Nav />
       <section>
-        <CoversSection />
+        <ProjectsSection />
       </section>
       <Footer />
     </>
