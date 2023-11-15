@@ -8,7 +8,7 @@ const YoutubeVideo = ({ src }: any) => {
 
     return (
         <div
-            className="bg-slate-400 p-4"
+            className="bg-slate-400 p-4 hover:scale-110 transition-all ease-500"
         >
             <iframe
                 // width="560"
@@ -21,7 +21,7 @@ const YoutubeVideo = ({ src }: any) => {
                 allowFullScreen
             ></iframe>
             <Button variant="contained" color='primary' style={{ backgroundColor: red[900] }} target="_blank" href="https://www.youtube.com/channel/UC7kHGbpDf0goDHH7cQfF92A?sub_confirmation=1"
-                className="mt-6">
+                className="mt-6 hover:scale-125 transition-all ease-500">
                 Suscribirse
             </Button>
         </div>

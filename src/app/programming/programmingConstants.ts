@@ -13,6 +13,8 @@ import typescript from "../../../assets/icons/typescript_icon.png";
 
 import nikeLandingPage from "./projectImages/nikeLandingPage.png";
 import zingoniPropiedades from "./projectImages/zingoniPropiedades.png";
+import techTalentHub from "./projectImages/techTalentHub.png";
+import conversor from "./projectImages/conversor.png";
 
 export const programmingProjects = [
   {
@@ -23,10 +25,31 @@ export const programmingProjects = [
     image: zingoniPropiedades,
   },
   {
+    name: "Tech Talent Hub",
+    description: "TechTalentHub fue el proyecto final del bootcamp Henry. Es una aplicación que busca crear vñinculos laborales entre empresas orientales y trabajadores latinoamericanos especiaizados en el rubro tecnológico.",
+    link: "https://tech-talent-hub-actual-git-develop-equipo3henry.vercel.app/",
+    techStack: [javascript, next, css, html, prisma, postgresql],
+    image: techTalentHub,
+  },
+  {
     name: "Nike Landing Page",
     description: "Landing page de Nike trabajada en Next js y aplicando estilos con Tailwind.",
     link: "https://nike-tailwind-ivanscarsella.vercel.app/",
     techStack: [javascript, next, css, tailwind],
     image: nikeLandingPage,
   },
+  {
+    name: "Conversor de Números Romanos",
+    description: "Aplicación creada para traducir números decimales a romanos y viceversa.",
+    link: "https://conversor-de-numeros-romanos-l7ms-ivanscarsella.vercel.app/",
+    techStack: [typescript, next, bootstrap, css],
+    image: conversor,
+  },
+  // {
+  //   name: "Proyecto Individual para Henry - Countries",
+  //   description: "Este proyecto lo realicé para el bootcamp de Henry, en donde pongo en práctica los recursos aprendidos para crear una aplicación en donde se ven distintos países vinculados a sus actividades turísticas.",
+  //   link: "https://github.com/IvanScarsella/PI-Countries-IvanScarsella",
+  //   techStack: [react, redux, javascript, css, html, postgresql],
+  //   image: techTalentHub,
+  // },
 ];
