@@ -1,6 +1,7 @@
 import Nav from '../components/Nav';
 import CoversSection from './musicSections/CoversSection';
 import Footer from '../sections/Footer';
+import Spotify from '../components/Spotify';
 
 const page = () => {
   return (
@@ -12,8 +13,11 @@ const page = () => {
       {/* <section>
         <OriginalSection />
       </section> */}
-      <section>
+      <section className='flex flex-row'>
+        <div className='w-9/12'>
         <CoversSection />
+        </div>
+        <Spotify />
       </section>
       <Footer />
     </>
