@@ -1,7 +1,7 @@
 import Nav from "./components/Nav"
 import Footer from "./sections/Footer"
 import Carousel from "./sections/Carousel"
-import Contact from "./sections/Contact"
+// import Contact from "./contact/contactForm/Contact"
 import Principal from "./sections/Principal"
 
 export default function Home() {
@@ -15,7 +15,7 @@ export default function Home() {
         <Carousel />
       </section>
       <section className="flex justify-center">
-        <Contact />
+        {/* <Contact /> */}
       </section>
       <section>
         <Footer />

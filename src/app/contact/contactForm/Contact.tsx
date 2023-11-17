@@ -37,16 +37,18 @@ const Contact = () => {
   })
 
   return (
-    <div className='max-w-xl'>
+    <div className='flex flex-col items-center max-w-xl'>
       {error && <Callout.Root color='red' className='mb-5'>
         <Callout.Text>{error}</Callout.Text>
       </Callout.Root>}
       <form
-        className='space-y-3'
+        className='flex flex-col items-center space-y-3'
         onSubmit={onSubmit}>
         <TextField.Root>
           <h2 className="font-palanquin text-xl capitalize font-bold lg:max-w-lg ">Deje su consulta</h2>
-          <TextField.Input placeholder='Asunto' {...register('title')} />
+          <div>
+            <TextField.Input placeholder='Asunto' {...register('title')} />
+          </div>
         </TextField.Root>
         <ErrorMessage>{errors.title?.message}</ErrorMessage>
         <TextField.Input placeholder="Ingrese su email" />

@@ -7,6 +7,8 @@ import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import Image from 'next/image'
+import logo from "../../../assets/images/ivanlogo_chico.png"
 
 const navigation = [
   { name: 'Inicio', href: '/', current: true },
@@ -45,7 +47,12 @@ export default function Nav() {
               </div>
               <div className="flex flex-1 items-center justify-center">
                 <div className="flex flex-shrink-0 items-center">
-                  <p>Logo</p>
+                  <Image 
+                  src={logo}
+                  alt='logo'
+                  width={100}
+                  height={100}
+                  />
                 </div>
                 <div className="flex justify-between items-center max-container max-sm:hidden">
                   <div className="flex space-x-20 font-palanquin">
