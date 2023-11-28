@@ -17,7 +17,7 @@ const MusicCard = ({ video }: any) => {
                         <span className="text-4xl"> {video.data.artist}</span>
                     </h2>
                     <h2 className="flex font-bold text-2xl"> Canción: &nbsp;
-                        <span className="text-3xl">                 "{video.data.song}"</span>
+                        <span className="text-xl">                 "{video.data.song}"</span>
                     </h2>
                     <h3 className="flex text-center text-xl">{video.data.genre}</h3>
                     {/* <Link href={video.data.link} target="_blank"> */}

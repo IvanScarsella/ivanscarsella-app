@@ -1,7 +1,10 @@
 import Nav from '../components/Nav';
-import CoversSection from './musicSections/CoversSection';
+import MusicSection from './musicSection/page';
 import Footer from '../sections/Footer';
 import Spotify from '../components/Spotify';
+import { coverVideos } from './musicConstants';
+import { originalVideos } from './musicConstants';
+
 
 const page = () => {
   return (
@@ -15,7 +18,14 @@ const page = () => {
       </section> */}
       <section className='flex flex-row'>
         <div className='w-9/12'>
-        <CoversSection />
+          <MusicSection
+            sectionName="Covers"
+            musicVideos={coverVideos}
+          />
+          <MusicSection
+            sectionName="Música Original"
+            musicVideos={originalVideos}
+          />
         </div>
         <Spotify />
       </section>
