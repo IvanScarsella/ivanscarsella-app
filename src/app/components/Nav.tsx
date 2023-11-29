@@ -65,6 +65,7 @@ export default function Nav() {
                           } px-3 py-2 rounded-md text-sm font-medium cursor-pointer`}
                         aria-current={item.current ? 'page' : undefined}
                         onClick={() => router.push(item.href)}
+                        key={item.name}
                       >
                         {item.name}
                       </a>

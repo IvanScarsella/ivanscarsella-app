@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import imagen_inicio from "../../../public/imagen_inicio.jpg"
+import imagen_inicio from "../../../public/imagen_carrusel_1.jpg"
 
 const Principal = () => {
   return (
@@ -13,7 +13,8 @@ const Principal = () => {
         <h2 className="font-palanquin text-4xl capitalize font-bold lg:max-w-lg ">
           Soy Iván Scarsella!
         </h2>
-        <p className="mt-4 lg:max-w-lg info-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa blanditiis omnis aliquid, itaque nemo ex unde quas reiciendis doloremque recusandae, soluta iste est explicabo dolore sapiente neque, cupiditate sunt ullam.</p>
+        <p className="mt-4 lg:max-w-lg info-text">Soy Licenciado y Profesor en Música con orientación en Música Popular, graduado de la Universidad Nacional de La Plata. Como baterista y pianista he participado en varios proyectos en donde he aprendido a desenvolverme en varios géneros musicales como el
+        <span className="text-xl"> Rock, Metal, Pop y Música latinoamericana.</span> </p>
         <div className="mt-11">
         {/* <Button label="View Details" /> */}
         </div>
