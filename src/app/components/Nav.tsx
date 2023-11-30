@@ -55,7 +55,7 @@ export default function Nav() {
                   />
                 </div>
                 <div className="flex justify-between items-center max-container max-sm:hidden">
-                  <div className="flex space-x-20 font-palanquin">
+                  <div className="flex space-x-20 font-palanquin tracking-wide">
                     {navigation.map((item) => (
                       // <Link key={item.name} href={item.href}>
                       <a
