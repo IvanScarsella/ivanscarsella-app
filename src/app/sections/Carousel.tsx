@@ -32,32 +32,32 @@ function ImagesCarousel() {
   const techStack = ['React', 'Next js', 'Redux', 'JavaScript', 'TypeScript', 'Tailwind', 'Bootstrap', 'HTML', 'CSS', 'PostgreSQL', 'Prisma', 'Node', 'Git']
 
   return (
-    <section className='flex justify-between flex-wrap items-center max-lg:flex-col gap-10 max-container m-10'>
-      <div className='flex flex-1 flex-row ml-10'>
-        <Carousel {...settings}>
+    <section className="flex justify-between items-center max-lg:flex-col gap-10 w-full max-container mt-10 text-justify mb-6">
+      <div className='flex flex-1 flex-row ml-10 '>
+        <Carousel {...settings} className='w-1/2'>
           {images.map((image, index) => (
             <div key={index} className='flex justify-center items-center w-7/12 h-96 m-4'>
-              <Image src={image.src} alt={image.alt} width={500} height={300} className='max-h-full shadow-lg shadow-indigo-500/40 ' />
+              <Image src={image.src} alt={image.alt} width={500} height={300} className='max-h-full shadow-lg shadow-indigo-500/40 rounded-3xl' />
             </div>
           ))}
         </Carousel>
-        <div className='mt-4 lg:max-w-lg info-text p-2 max-h-full shadow-2xl shadow-red-500'>
+        <div className='mt-4 info-text p-4 max-h-full shadow-2xl shadow-red-500 w-1/2 rounded-3xl'>
           <p className='leading-8'>
             Como programador soy graduado del bootcamp Henry. Las tecnologías que domino son:
-            <ul>
-              {techStack.map((tech) => (
-                <div className='flex flex-row gap-4 m-2'>
-                  <Image
-                    src={tool}
-                    alt={tech}
-                    width={16}
-                    height={16}
-                  />
-                  <li className='text-xl hover:text-2xl hover:font-bold transition-all ease-500 bg-red-700 bg-opacity-5'>{tech} </li>
-                </div>
-              ))}
-            </ul>
           </p>
+          <ul>
+            {techStack.map((tech) => (
+              <div className='flex flex-row gap-4 m-2'>
+                <Image
+                  src={tool}
+                  alt={tech}
+                  width={16}
+                  height={16}
+                />
+                <li className='text-xl hover:text-2xl hover:font-bold transition-all ease-500 bg-red-700 bg-opacity-5 underline decoration-dotted decoration-2 underline-offset-2 uppercase'>{tech} </li>
+              </div>
+            ))}
+          </ul>
         </div>
       </div>
     </section>
