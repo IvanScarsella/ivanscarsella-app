@@ -21,7 +21,7 @@ function ImagesCarousel() {
   const settings = {
     infiniteLoop: true,
     autoPlay: true,
-    // showThumbs: false,
+    showThumbs: false,
     interval: 3000,
     showArrows: false,
     showStatus: false,

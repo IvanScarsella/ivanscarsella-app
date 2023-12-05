@@ -11,7 +11,7 @@ const MusicSection = ({ sectionName, musicVideos }: any) => {
 
     return (
         <>
-            <div className="flex flex-col text-center m-4 p-8">
+            <div className="flex flex-col text-center m-4 p-8 border-stone-800 border-y-2">
 
                 <div className="m-8" >
                     <h2 className="text-3xl font-palanquin font-semibold" >{sectionName}</h2>
@@ -28,7 +28,7 @@ const MusicSection = ({ sectionName, musicVideos }: any) => {
                         <Button
                         onClick={() => setRenderVideos(musicVideos)}
                         hidden={renderVideos.length > 5}
-                        className="hover:scale-125 transition-all ease-500"
+                        className="hover:scale-125 transition-all ease-500 "
                         >
                             Ver más...
                         </Button>

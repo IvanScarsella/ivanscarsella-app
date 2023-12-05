@@ -8,7 +8,7 @@ const YoutubeVideo = ({ src }: any) => {
 
     return (
         <div
-            className="bg-slate-400 p-4"
+            className="bg-slate-400 p-4 rounded-3xl"
         >
             <iframe
                 // width="560"
