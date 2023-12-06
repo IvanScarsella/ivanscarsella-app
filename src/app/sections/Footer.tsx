@@ -33,7 +33,7 @@ const Footer = () => {
 
   return (
     <footer
-      className="w-full bg-gray-900 text-gray-300 mt-4"
+      className="w-full bg-black text-gray-300 mt-4"
     >
       <div className="flex flex-1 flex-row justify-around items-start max-lg:flex-col p-4">
 

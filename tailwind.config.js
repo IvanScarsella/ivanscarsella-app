@@ -7,6 +7,9 @@ module.exports = {
       backgroundImage: {
         'light': "url('/sol.png')",
         'dark': "url('/luna.png')",
+      },
+      colors: {
+        bordo: '#540000'
       }
     },
   },

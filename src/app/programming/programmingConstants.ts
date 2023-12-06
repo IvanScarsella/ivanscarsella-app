@@ -19,30 +19,59 @@ import conversor from "./projectImages/conversor.png";
 export const programmingProjects = [
   {
     name: "Zingoni Propiedades",
-    description: "Sitio web desarrollado para la inmobiliaria Zingoni Propiedades. Contiene filtros de búsqueda, carrusel con las propiedades destacadas, páginas de contacto con la posibilidad de enviar mails y geoubicación con Google Maps.",
-    link: "zingonipropiedades.com.ar",
-    techStack: [javascript, next, html, css, prisma, postgresql, googleMaps],
+    description:
+      "Sitio web desarrollado para la inmobiliaria Zingoni Propiedades. Contiene filtros de búsqueda, carrusel con las propiedades destacadas, páginas de contacto con la posibilidad de enviar mails y geoubicación con Google Maps.",
+    link: "https://zingonipropiedades.com.ar",
+    techStack: [
+      { src: javascript, name: "JavaScript" },
+      { src: next, name: "Next Js" },
+      { src: html, name: "HTML" },
+      { src: css, name: "CSS" },
+      { src: prisma, name: "Prisma" },
+      { src: postgresql, name: "PostgreSQL" },
+      { src: googleMaps, name: "Google Maps" },
+    ],
     image: zingoniPropiedades,
   },
   {
     name: "Tech Talent Hub",
-    description: "TechTalentHub fue el proyecto final del bootcamp Henry. Es una aplicación que busca crear vñinculos laborales entre empresas orientales y trabajadores latinoamericanos especiaizados en el rubro tecnológico.",
+    description:
+      "TechTalentHub fue el proyecto final del bootcamp Henry. Es una aplicación que busca crear vñinculos laborales entre empresas orientales y trabajadores latinoamericanos especiaizados en el rubro tecnológico.",
     link: "https://tech-talent-hub-actual-git-develop-equipo3henry.vercel.app/",
-    techStack: [javascript, next, css, html, prisma, postgresql],
+    techStack: [
+      { src: javascript, name: "JavaScript" },
+      { src: next, name: "Next Js" },
+      { src: css, name: "CSS" },
+      { src: html, name: "HTML" },
+      { src: prisma, name: "Prisma" },
+      { src: postgresql, name: "PostgreSQL" },
+    ],
     image: techTalentHub,
   },
   {
     name: "Nike Landing Page",
-    description: "Landing page de Nike trabajada en Next js y aplicando estilos con Tailwind.",
+    description:
+      "Landing page de Nike trabajada en Next js y aplicando estilos con Tailwind.",
     link: "https://nike-tailwind-ivanscarsella.vercel.app/",
-    techStack: [javascript, next, css, tailwind],
+    techStack: [
+      { src: javascript, name: "JavaScript" },
+      { src: next, name: "Next Js" },
+      { src: css, name: "CSS" },
+      { src: tailwind, name: "Tailwind" },
+    ],
     image: nikeLandingPage,
   },
   {
     name: "Conversor de Números Romanos",
-    description: "Aplicación creada para traducir números decimales a romanos y viceversa.",
+    description:
+      "Aplicación creada para traducir números decimales a romanos y viceversa.",
     link: "https://conversor-de-numeros-romanos-l7ms-ivanscarsella.vercel.app/",
-    techStack: [typescript, next, bootstrap, css],
+    techStack: [
+      { src: typescript, name: "TypeScript" },
+      { src: next, name: "Next Js" },
+      { src: bootstrap, name: "Bootstrap" },
+      { src: css, name: "CSS" },
+    ],
     image: conversor,
   },
   // {
