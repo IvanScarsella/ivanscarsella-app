@@ -1,32 +1,40 @@
-"use client"
+'use client'
 
-import Link from "next/link"
-import Button from "../components/Button";
-import YoutubeVideo from "./ProgrammingProject";
+import Link from 'next/link'
+import Button from '../components/Button'
+import YoutubeVideo from './ProgrammingProject'
 
 const MusicCard = ({ video }: any) => {
-    return (
-        <div className="flex flex-row justify-between items-center w-10/12 bg-slate-300 border-neutral-500 border-4 p-4 hover:scale-110 transition-all ease-500 rounded-3xl">
-            <div className=" bg-cyan-950 ml-36 hover:scale-110 transition-all ease-500 rounded-3xl">
-                <YoutubeVideo key={video.data} src={video.src.toString()} />
-            </div>
+  return (
+    <div className='ease-500 flex w-10/12 flex-row items-center justify-between rounded-3xl border-4 border-neutral-500 bg-slate-300 bg-opacity-10 p-4 transition-all hover:scale-110 hover:shadow-2xl'>
+      <div className=' ease-500 ml-36 rounded-3xl bg-cyan-950 bg-opacity-10 transition-all hover:scale-110 hover:shadow-2xl'>
+        <YoutubeVideo key={video.data} src={video.src.toString()} />
+      </div>
 
-            <div className="flex flex-1 flex-col items-center justify-around flex-wrap  w-1/2">
-                <div className="flex flex-1 flex-col justify-around gap-6 items-center font-palanquin text-md font-medium lg:max-w-lg tracking-wide info-text">
-                    <h2 className="flex font-bold text-xl"> Artista: &nbsp;
-                    </h2>
-                        <span className="text-4xl text-slate-600 font-bold"> {video.data.artist}</span>
-                    <h2 className="flex font-bold text-xl"> Canción: &nbsp;
-                    </h2>
-                        <span className="text-3xl text-slate-600 font-bold">                 "{video.data.song}"</span>
-                    <h3 className="flex text-center text-xl">{video.data.genre}</h3>
-                    {/* <Link href={video.data.link} target="_blank"> */}
-                        <Button text="Ver en YouTube" href={video.data.link} target="_blank" />
-                    {/* </Link> */}
-                </div>
-            </div>
+      <div className='flex w-1/2 flex-1 flex-col flex-wrap items-center  justify-around'>
+        <div className='font-palanquin text-md info-text flex flex-1 flex-col items-center justify-around gap-6 font-medium tracking-wide lg:max-w-lg'>
+          <h2 className='flex text-xl font-bold'> Artista: &nbsp;</h2>
+          <span className='text-4xl font-bold text-slate-400'>
+            {' '}
+            {video.data.artist}
+          </span>
+          <h2 className='flex text-xl font-bold'> Canción: &nbsp;</h2>
+          <span className='text-3xl font-bold text-slate-400'>
+            {' '}
+            "{video.data.song}"
+          </span>
+          <h3 className='flex text-center text-xl'>{video.data.genre}</h3>
+          {/* <Link href={video.data.link} target="_blank"> */}
+          <Button
+            text='Ver en YouTube'
+            href={video.data.link}
+            target='_blank'
+          />
+          {/* </Link> */}
         </div>
-    )
+      </div>
+    </div>
+  )
 }
 
 export default MusicCard

@@ -1,18 +1,17 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}",],
+  content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
   darkMode: 'class',
   theme: {
     extend: {
       backgroundImage: {
-        'light': "url('/sol.png')",
-        'dark': "url('/luna.png')",
+        light: "url('/sol.png')",
+        dark: "url('/luna.png')",
       },
       colors: {
-        bordo: '#540000'
-      }
+        bordo: '#540000',
+      },
     },
   },
   plugins: [],
 }
-
