@@ -47,7 +47,7 @@ function ImagesCarousel() {
                 alt={image.alt}
                 width={500}
                 height={300}
-                className='max-h-full rounded-3xl shadow-lg'
+                className='max-h-full rounded-3xl shadow-lg hover:shadow-2xl'
               />
             </div>
           ))}

@@ -7,7 +7,7 @@ import ProjectCard from '@/app/components/ProjectCard'
 const CoversSection = () => {
   return (
     <>
-      <div className='m-4 flex flex-col border-y-2 border-stone-800 p-8 text-center'>
+      <div className='flex flex-col border-y-2 border-stone-800 p-8 text-center'>
         <div className='m-8'>
           <h1 className='font-palanquin text-4xl font-semibold text-white'>
             Proyectos

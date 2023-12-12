@@ -35,13 +35,13 @@ const Principal = () => {
         </ul>
         <div className='mt-11'>{/* <Button label="View Details" /> */}</div>
       </div>
-      <div className='flex flex-1 items-center justify-center'>
+      <div className='flex flex-1 items-center justify-center '>
         <Image
           src={imagen_inicio}
           alt='shoe8'
           width={570}
           height={522}
-          className='rounded-3xl object-contain shadow-lg'
+          className='rounded-3xl object-contain shadow-lg hover:shadow-2xl '
         />
       </div>
     </section>
