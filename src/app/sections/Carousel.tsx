@@ -34,13 +34,15 @@ function ImagesCarousel() {
   ]
 
   return (
-    <section className='max-container mb-6 mt-10 flex w-full items-center justify-between gap-10 text-justify max-lg:flex-col'>
-      <div className='ml-10 flex flex-1 flex-row '>
-        <Carousel {...settings} className='w-1/2'>
+    <section className='max-container flex w-full items-center justify-between  text-justify max-xl:flex-col'>
+      <div className='max-container flex w-full items-center justify-between gap-10 text-justify max-xl:flex-col-reverse'>
+        <Carousel {...settings} className=' flex flex-row w-1/2
+        max-xl:scale-125 max-xl:justify-center max-xl:m-10 
+        '>
           {images.map((image, index) => (
             <div
               key={index}
-              className='m-4 flex h-96 w-10/12 items-center justify-center'
+              className='flex flex-1 items-center justify-center w-full flex-wrap max-xl:mt-4 '
             >
               <Image
                 src={image.src}
@@ -52,7 +54,9 @@ function ImagesCarousel() {
             </div>
           ))}
         </Carousel>
-        <div className='info-text ease-500 mt-4 max-h-full rounded-3xl border-2 border-red-700 bg-gradient-to-r from-black to-red-800 p-4 shadow-lg transition-all hover:border-red-500 hover:shadow-2xl'>
+        <div className='info-text w-1/2 ease-500 mt-4 max-h-full rounded-3xl border-2 border-red-700 bg-gradient-to-r from-black to-red-800 p-4 shadow-lg transition-all hover:border-red-500 hover:shadow-2xl
+        max-xl:w-5/6
+        '>
           <p className='leading-8 text-white'>
             Como programador, soy graduado del bootcamp Henry. Las tecnologías
             con las que trabajo son:

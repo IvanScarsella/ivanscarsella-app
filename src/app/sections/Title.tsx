@@ -8,7 +8,7 @@ const Title = () => {
           Soy Iván Scarsella
         </h2>
         <h3 className='font-palanquin text-md font-montserrat font-medium tracking-wide text-white'>
-          En este sitio web, puedes encontrar mi trabajo en la rama artística y
+          En este sitio web, podés encontrar mi trabajo en la rama artística y
           tecnológica.
         </h3>
       </div>
