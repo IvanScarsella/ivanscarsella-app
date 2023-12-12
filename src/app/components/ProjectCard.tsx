@@ -6,13 +6,13 @@ const ProjectCard = ({ project }: any) => {
 
   return (
     <Link target='_blank' href={project.link}>
-      <div className='ease-500 flex flex-row items-center justify-between gap-16 rounded-3xl border-4 border-neutral-500 bg-slate-300 bg-opacity-10 p-4 px-16 transition-all hover:scale-110 hover:bg-slate-200 hover:bg-opacity-20  hover:shadow-2xl '>
+      <div className='ease-500 flex flex-row items-center justify-between gap-16 rounded-3xl border-4 border-neutral-500 bg-gradient-to-r from-black to-red-800 p-4 px-16 transition-all hover:scale-110 hover:bg-slate-200 hover:bg-opacity-20  hover:shadow-2xl '>
         <Image
           src={project.image}
           alt={project.name}
           width={600}
           // height={400}
-          className='ease-500 max-h-96 max-w-lg rounded-3xl bg-slate-400 bg-opacity-10 p-4 transition-all hover:scale-110 hover:shadow-2xl'
+          className='ease-500 max-h-96 max-w-lg rounded-3xl bg-gradient-to-l from-black to-red-800 p-4 transition-all hover:scale-110 hover:shadow-2xl'
         />
 
         <div className='flex w-1/2 flex-1 flex-col flex-wrap items-center  justify-around '>
