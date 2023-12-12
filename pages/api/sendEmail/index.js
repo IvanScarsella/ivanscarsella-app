@@ -21,7 +21,10 @@ export default async function sendEmail(req, res){
             to: 'scarsellaivan@gmail.com',
             subject: subject,
             html: `
-            <h3>Hola: ${message}</h3>
+            <h2>Mensaje de la página Iván Scarsella:</h2>
+            <h3>Email:  ${email}</h3>
+            <h3>Asunto:  ${subject}</h3>
+            <h3>Mensaje:  ${message}</h3>
             `
         }
         
