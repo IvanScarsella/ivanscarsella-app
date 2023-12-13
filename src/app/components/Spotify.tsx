@@ -1,6 +1,6 @@
 const Spotify = () => {
   return (
-    <div>
+    <div className="p-14 max-xl:-z-10">
       <iframe
         // style="border-radius:12px"
         className='ease-500 transition-all hover:scale-110 hover:shadow-2xl'

@@ -4,23 +4,21 @@ import ProgrammingProject from '@/app/components/ProgrammingProject'
 import Image from 'next/image'
 import ProjectCard from '@/app/components/ProjectCard'
 
-const CoversSection = () => {
+const ProgrammingSection = () => {
   return (
-    <>
-      <div className='flex flex-col border-y-2 border-stone-800 p-8 text-center'>
-        <div className='m-8'>
-          <h1 className='font-palanquin text-4xl font-semibold text-white'>
-            Proyectos
-          </h1>
-        </div>
-        <ul className='flex flex-1 flex-col items-center gap-12 p-10'>
-          {programmingProjects.map((project) => (
-            <ProjectCard project={project} />
-          ))}
-        </ul>
+    <div className='flex flex-col border-y-2 border-stone-800 p-8 text-center'>
+      <div className='m-8'>
+        <h1 className='font-palanquin text-4xl font-semibold text-white'>
+          Proyectos
+        </h1>
       </div>
-    </>
-  )
-}
+      <ul className='flex flex-1 flex-col items-center gap-12 p-10'>
+        {programmingProjects.map((project, index) => (
+          <ProjectCard key={index} project={project} />
+        ))}
+      </ul>
+    </div>
+  );
+};
 
-export default CoversSection
+export default ProgrammingSection;
