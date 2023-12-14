@@ -36,13 +36,16 @@ function ImagesCarousel() {
   return (
     <section className='max-container flex w-full items-center justify-between  text-justify max-xl:flex-col'>
       <div className='max-container flex w-full items-center justify-between gap-10 text-justify max-xl:flex-col-reverse'>
-        <Carousel {...settings} className=' flex flex-row w-1/2
-        max-xl:scale-125 max-xl:justify-center max-xl:m-10 
-        '>
+        <Carousel
+          {...settings}
+          className=' flex w-1/2 flex-row
+        max-xl:m-10 max-xl:scale-125 max-xl:justify-center 
+        '
+        >
           {images.map((image, index) => (
             <div
               key={index}
-              className='flex flex-1 items-center justify-center w-full flex-wrap max-xl:mt-4 '
+              className='flex w-full flex-1 flex-wrap items-center justify-center max-xl:mt-4 '
             >
               <Image
                 src={image.src}
@@ -54,9 +57,11 @@ function ImagesCarousel() {
             </div>
           ))}
         </Carousel>
-        <div className='info-text w-1/2 ease-500 mt-4 max-h-full rounded-3xl border-2 border-red-700 bg-gradient-to-r from-black to-red-800 p-4 shadow-lg transition-all hover:border-red-500 hover:shadow-2xl
+        <div
+          className='info-text ease-500 mt-4 max-h-full w-1/2 rounded-3xl border-2 border-red-700 bg-gradient-to-r from-black to-red-800 p-4 shadow-lg transition-all hover:border-red-500 hover:shadow-2xl
         max-xl:w-5/6
-        '>
+        '
+        >
           <p className='leading-8 text-white'>
             Como programador, soy graduado del bootcamp Henry. Las tecnologías
             con las que trabajo son:

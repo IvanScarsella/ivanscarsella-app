@@ -1,0 +1,160 @@
+{
+  "coverVideos": [
+    {
+      "data": {
+        "artist": "La Mono",
+        "song": "La Clase Santa",
+        "genre": "Grunge, Rock Progresivo",
+        "link": "https://www.youtube.com/watch?v=VNd_GyjUj1M&t=1s&ab_channel=Iv%C3%A1nScarsella"
+      },
+      "src": "https://www.youtube.com/embed/VNd_GyjUj1M?si=4CpF1h71TUUAgN3z"
+    },
+    {
+      "data": {
+        "artist": "Barro",
+        "song": "Tik Tok",
+        "genre": "Nu Metal, Djent",
+        "link": "https://www.youtube.com/watch?v=RXy6ynk6HTY&ab_channel=Iv%C3%A1nScarsella"
+      },
+      "src": "https://www.youtube.com/embed/RXy6ynk6HTY?si=qx19ZT8Pwd9MxKvF"
+    },
+    {
+      "data": {
+        "artist": "Nathy Peluso",
+        "song": "Celebré",
+        "genre": "Hip hop, Trap",
+        "link": "https://www.youtube.com/watch?v=1gQmGAd1Y0Y&ab_channel=Iv%C3%A1nScarsella"
+      },
+      "src": "https://www.youtube.com/embed/1gQmGAd1Y0Y?si=tZXEURN-Dn-8tbpk"
+    },
+    {
+      "data": {
+        "artist": "Barro",
+        "song": "Fornai",
+        "genre": "Nu Metal, Djent",
+        "link": "https://www.youtube.com/watch?v=G3j3v1n1gmo&ab_channel=Iv%C3%A1nScarsella"
+      },
+      "src": "https://www.youtube.com/embed/G3j3v1n1gmo?si=De89lQHIQ7B8YmVF"
+    },
+    {
+      "data": {
+        "artist": "Persefone",
+        "song": "Mind As Universe",
+        "genre": "Death Metal Progresivo",
+        "link": "https://www.youtube.com/watch?v=W18ibGDa4Ew&t=80s&ab_channel=Iv%C3%A1nScarsella"
+      },
+      "src": "https://www.youtube.com/embed/W18ibGDa4Ew?si=5J2qlB_uEA5VSMOW"
+    },
+    {
+      "data": {
+        "artist": "Eruca Sativa",
+        "song": "Nada Salvaje",
+        "genre": "Rock",
+        "link": "https://www.youtube.com/watch?v=umGlAbWeuDw&ab_channel=Iv%C3%A1nScarsella"
+      },
+      "src": "https://www.youtube.com/embed/umGlAbWeuDw?si=9cwhazPLw7r2BZLY"
+    }
+  ],
+  "originalVideos": [
+    {
+      "data": {
+        "artist": "F20",
+        "song": "Daño Colateral",
+        "genre": "Metal Progresivo",
+        "link": "https://www.youtube.com/watch?v=5egJ4yKepHU&ab_channel=F20"
+      },
+      "src": "https://www.youtube.com/embed/5egJ4yKepHU?si=FGg7Qc5INcQheNGt"
+    },
+    {
+      "data": {
+        "artist": "M28",
+        "song": "Domador",
+        "genre": "Groove Metal, Djent",
+        "link": "https://www.youtube.com/watch?v=l9OAcKClXog&ab_channel=M28metal"
+      },
+      "src": "https://www.youtube.com/embed/l9OAcKClXog?si=K_RqYdjwiGMdmiBS"
+    },
+    {
+      "data": {
+        "artist": "M28",
+        "song": "Laberinto",
+        "genre": "Groove Metal, Djent",
+        "link": "https://www.youtube.com/watch?v=NYanwDucIfU&ab_channel=M28metal"
+      },
+      "src": "https://www.youtube.com/embed/NYanwDucIfU?si=KYp1Aib-dFog-rSS"
+    },
+    {
+      "data": {
+        "artist": "M28",
+        "song": "Laureles",
+        "genre": "Groove Metal, Djent",
+        "link": "https://www.youtube.com/watch?v=AoL3WiqHMCM&ab_channel=M28metal"
+      },
+      "src": "https://www.youtube.com/embed/AoL3WiqHMCM?si=IimiCpnlHFgYFti3"
+    },
+    {
+      "data": {
+        "artist": "Kali Yuga",
+        "song": "Pangea",
+        "genre": "Heavy Metal",
+        "link": "https://www.youtube.com/watch?v=PZePegj6HcQ&ab_channel=KaliYuga"
+      },
+      "src": "https://www.youtube.com/embed/PZePegj6HcQ?si=_4vBOsCZ3tvktEXV"
+    }
+  ],
+  "programmingProjects": [
+    {
+      "name": "Zingoni Propiedades",
+      "description": "Sitio web desarrollado para la inmobiliaria Zingoni Propiedades. Contiene filtros de búsqueda, carrusel con las propiedades destacadas, páginas de contacto con la posibilidad de enviar mails y geoubicación con Google Maps.",
+      "link": "https://zingonipropiedades.com.ar",
+      "techStack": [
+        { "src": "javascript_icon.png", "name": "JavaScript" },
+        { "src": "next_icon.svg", "name": "Next Js" },
+        { "src": "html_icon.png", "name": "HTML" },
+        { "src": "css.png", "name": "CSS" },
+        { "src": "prisma_icon.png", "name": "Prisma" },
+        { "src": "postgresql_icon.png", "name": "PostgreSQL" },
+        { "src": "googleMaps_icon.png", "name": "Google Maps" }
+      ],
+      "image": "/projectImages/zingoniPropiedades.png"
+    },
+    {
+      "name": "Tech Talent Hub",
+      "description": "TechTalentHub fue el proyecto final del bootcamp Henry. Es una aplicación que busca crear vñinculos laborales entre empresas orientales y trabajadores latinoamericanos especiaizados en el rubro tecnológico.",
+      "link": "https://tech-talent-hub-actual-git-develop-equipo3henry.vercel.app/",
+      "techStack": [
+        { "src": "javascript_icon.png", "name": "JavaScript" },
+        { "src": "next_icon.svg", "name": "Next Js" },
+        { "src": "css.png", "name": "CSS" },
+        { "src": "html_icon.png", "name": "HTML" },
+        { "src": "prisma_icon.png", "name": "Prisma" },
+        { "src": "postgresql_icon.png", "name": "PostgreSQL" }
+      ],
+      "image": "/projectImages/techTalentHub.png"
+    },
+    {
+      "name": "Nike Landing Page",
+      "description": "Landing page de Nike trabajada en Next js y aplicando estilos con Tailwind.",
+      "link": "https://nike-tailwind-ivanscarsella.vercel.app/",
+      "techStack": [
+        { "src": "javascript_icon.png", "name": "JavaScript" },
+        { "src": "next_icon.svg", "name": "Next Js" },
+        { "src": "css.png", "name": "CSS" },
+        { "src": "tailwind_icon.webp", "name": "Tailwind" }
+      ],
+      "image": "/projectImages/nikeLandingPage.png"
+    },
+    {
+      "name": "Conversor de Números Romanos",
+      "description": "Aplicación creada para traducir números decimales a romanos y viceversa.",
+      "link": "https://conversor-de-numeros-romanos-l7ms-ivanscarsella.vercel.app/",
+      "techStack": [
+        { "src": "typescript_icon.png", "name": "TypeScript" },
+        { "src": "next_icon.svg", "name": "Next Js" },
+        { "src": "bootstrap_icon.png", "name": "Bootstrap" },
+        { "src": "css.png", "name": "CSS" }
+      ],
+      "image": "/projectImages/conversor.png"
+    }
+  ]
+}

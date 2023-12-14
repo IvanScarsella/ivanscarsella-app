@@ -1,8 +1,8 @@
-import { Button } from '@mui/material';
-import { red } from '@mui/material/colors';
+import { Button } from '@mui/material'
+import { red } from '@mui/material/colors'
 
-const YoutubeVideo = ({ src }:any) => {
-  const link = src;
+const YoutubeVideo = ({ src }: any) => {
+  const link = src
 
   return (
     <div className='rounded-3xl bg-opacity-10 p-4'>
@@ -26,7 +26,7 @@ const YoutubeVideo = ({ src }:any) => {
         Suscribirse
       </Button>
     </div>
-  );
-};
+  )
+}
 
-export default YoutubeVideo;
+export default YoutubeVideo

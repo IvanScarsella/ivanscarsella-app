@@ -1,11 +1,28 @@
-import Nav from '../components/Nav';
-import MusicSection from './musicSection/page';
-import Footer from '../sections/Footer';
-import Spotify from '../components/Spotify';
-import { coverVideos } from './musicConstants';
-import { originalVideos } from './musicConstants';
+'use client'
+
+import React, { useEffect, useState } from 'react'
+import Nav from '../components/Nav'
+import MusicSection from './musicSection/page'
+import Footer from '../sections/Footer'
+import Spotify from '../components/Spotify'
+import { fetchVideos } from './musicConstants'
 
 const Page = () => {
+  const [coverVideos, setCoverVideos] = useState([])
+  const [originalVideos, setOriginalVideos] = useState([])
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const coverData = await fetchVideos('coverVideos')
+      const originalData = await fetchVideos('originalVideos')
+
+      setCoverVideos(coverData)
+      setOriginalVideos(originalData)
+    }
+
+    fetchData()
+  }, [])
+
   return (
     <>
       <Nav />
@@ -24,12 +41,11 @@ const Page = () => {
         </div>
         <div className='w-full lg:w-1/4'>
           <Spotify />
-
         </div>
       </section>
       <Footer />
     </>
-  );
-};
+  )
+}
 
-export default Page;
+export default Page
