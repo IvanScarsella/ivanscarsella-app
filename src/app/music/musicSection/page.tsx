@@ -8,7 +8,9 @@ const MusicSection = ({ sectionName, musicVideos }: any) => {
   const [renderVideos, setRenderVideos] = useState([])
 
   useEffect(() => {
-    setRenderVideos(musicVideos.slice(0, 5))
+    if (musicVideos) {
+      setRenderVideos(musicVideos.slice(0, 5))
+    }
   }, [musicVideos])
 
   const showMoreButton = renderVideos.length < musicVideos.length
