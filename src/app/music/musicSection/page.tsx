@@ -5,7 +5,7 @@ import MusicCard from '@/app/components/MusicCard'
 import { useState, useEffect } from 'react'
 
 const MusicSection = ({ sectionName, musicVideos }: any) => {
-  const [renderVideos, setRenderVideos] = useState(musicVideos.slice(0, 5))
+  const [renderVideos, setRenderVideos] = useState([])
 
   useEffect(() => {
     setRenderVideos(musicVideos.slice(0, 5))
