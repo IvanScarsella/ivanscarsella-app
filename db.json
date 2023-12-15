@@ -1,5 +1,15 @@
+
 {
   "coverVideos": [
+    {
+      "data": {
+        "artist": "Alluvial",
+        "song": "40 Stories",
+        "genre": "Death Metal",
+        "link": "https://www.youtube.com/watch?v=a-qrYxbr51g&ab_channel=Iv%C3%A1nScarsella"
+      },
+      "src": "https://www.youtube.com/embed/a-qrYxbr51g?si=hUIKt5hYuVFPN6Sh"
+    },
     {
       "data": {
         "artist": "La Mono",
