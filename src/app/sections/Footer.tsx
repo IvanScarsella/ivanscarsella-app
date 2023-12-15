@@ -39,7 +39,7 @@ const Footer = () => {
   const router = useRouter()
 
   return (
-    <footer className='bg-black text-gray-300'>
+    <footer className='bg-black text-gray-300 mt-4'>
       <div className='mx-auto flex max-w-screen-xl flex-col items-start items-center justify-around p-4 lg:flex-row lg:px-8'>
         <div className='mb-8 flex flex-col items-start lg:mb-0'>
           {/* <Link href='/'>
