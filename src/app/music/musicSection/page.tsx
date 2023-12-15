@@ -13,8 +13,8 @@ const MusicSection = ({ sectionName, musicVideos }: any) => {
     }
   }, [musicVideos])
 
-  const showMoreButton = renderVideos.length < musicVideos.length
-  const showLessButton = renderVideos.length > 5
+  const showMoreButton:boolean = musicVideos ? renderVideos.length < musicVideos.length : false
+  const showLessButton:boolean = renderVideos.length > 5
 
   return (
     <div className='m-4 flex flex-col border-y-2 border-stone-800 p-8 text-center text-white'>
