@@ -20,7 +20,7 @@ const Principal = () => {
           {musicGenres.map((genre, index) => (
             <li
               key={index}
-              className='ease-500 mt-2 flex items-center gap-4 transition-all hover:text-2xl hover:font-bold hover:underline hover:underline-offset-2'
+              className='ease-500 mt-2 flex items-center gap-4 transition-all hover:text-2xl hover:font-bold hover:underline hover:underline-offset-2 cursor-default'
             >
               <Image
                 src={music}
