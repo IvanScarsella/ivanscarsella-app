@@ -25,9 +25,9 @@ const MusicSection = ({ sectionName, musicVideos }: any) => {
         {renderVideos.map((video: any, index: any) => (
           <MusicCard key={index} video={video} />
         ))}
-        <p className='italic'>
+        {musicVideos ? <p className='italic'>
           Mostrando {renderVideos.length} de {musicVideos.length}
-        </p>
+        </p> : null}
       </ul>
       <div className='line-clamp-1 flex flex-1 flex-col items-center'>
         {showMoreButton && (
