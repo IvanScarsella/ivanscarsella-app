@@ -111,7 +111,7 @@ const apiUrl =
   process.env.NODE_ENV === 'development'
     ? 'http://localhost:4000' // URL local para desarrollo
     // : 'https://ivanscarsella.com'
-    : 'https://ivanscarsella-app-ivanscarsella.vercel.app/'
+    : 'https://www.ivanscarsella.com.ar/'
 
 export const fetchVideos = async (sectionName: string) => {
   const response = await fetch(`${apiUrl}/${sectionName}`)
