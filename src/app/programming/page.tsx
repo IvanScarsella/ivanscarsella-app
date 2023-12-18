@@ -5,17 +5,18 @@ import ProjectsSection from './programmingSections/ProjectsSection'
 import Footer from '../sections/Footer'
 import { fetchProjects } from '../music/musicConstants'
 import { useEffect, useState } from 'react'
+import axios from 'axios'
 
 const page = () => {
   const [programmingProjects, setProgrammingProjects] = useState([])
   useEffect(() => {
     const fetchData = async () => {
-      const projectsData = await fetchProjects()
-      setProgrammingProjects(projectsData)
+      const projectsData = await axios.get("/api/getProjects")
+      setProgrammingProjects(projectsData.data)
     }
     fetchData()
   }, [])
-  console.log(programmingProjects)
+
   return (
     <>
       <Nav />

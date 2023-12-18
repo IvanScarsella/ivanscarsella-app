@@ -123,6 +123,11 @@ export const fetchProjects = async () => {
   const data = await response.json()
   return data
 }
+// PROBAR DE HACER UNA RUTA EN PAGES/API QUE IMPLEMENTE ESTA FUNCION A VER SI SE FUNCIONA EL DEPLOY
+
+
+
+
 
 // export const fetchOriginalVideos = async () => {
 //   const response = await fetch('http://localhost:4000/originalVideos');

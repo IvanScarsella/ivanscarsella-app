@@ -6,6 +6,7 @@ import MusicSection from './musicSection/page'
 import Footer from '../sections/Footer'
 import Spotify from '../components/Spotify'
 import { fetchVideos } from './musicConstants'
+import axios from 'axios'
 
 const Page = () => {
   const [coverVideos, setCoverVideos] = useState([])
@@ -13,15 +14,20 @@ const Page = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const coverData = await fetchVideos('coverVideos')
-      const originalData = await fetchVideos('originalVideos')
-
-      setCoverVideos(coverData)
-      setOriginalVideos(originalData)
+      try {
+        const coverData = await axios.get("/api/getCoverVideos")
+        const originalData = await axios.get("/api/getOriginalVideos")
+  
+        setCoverVideos(coverData.data) // Aquí
+        setOriginalVideos(originalData.data) // Y aquí
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
     }
-
+  
     fetchData()
   }, [])
+  
 
   return (
     <>
