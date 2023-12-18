@@ -82,8 +82,8 @@ const Footer = () => {
       </div>
 
       <div className='text-white-400 mt-8'>
-        <div className='font-montserrat mx-auto flex max-w-screen-xl items-center justify-between'>
-          <p>&copy; 2023 Iván Scarsella. Todos los derechos reservados.</p>
+        <div className='font-montserrat mx-auto flex flex-col max-w-screen-xl items-center justify-between'>
+          <p>&copy; 2024 Iván Scarsella. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>

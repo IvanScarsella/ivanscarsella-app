@@ -3,8 +3,6 @@ import Link from 'next/link'
 import javascript from '../../../assets/icons/javascript_icon.png'
 
 const ProjectCard = ({ project }: any) => {
-  // console.log(project.techStack[1]);
-  console.log(javascript)
 
   return (
     <Link target='_blank' href={project.link}>

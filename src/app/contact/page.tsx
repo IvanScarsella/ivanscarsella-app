@@ -38,7 +38,7 @@ const ContactPage = () => {
           <ul>
             {programmingServices.map((service, key) => (
               <div
-                className='ease-500 m-2 flex flex-row gap-4 p-4 transition-all hover:scale-110'
+                className='ease-500 m-4 flex flex-row gap-4 p-4 transition-all hover:scale-110'
                 key={key}
               >
                 <div className='relative h-10 w-10'>
@@ -56,7 +56,7 @@ const ContactPage = () => {
             ))}
             {musicServices.map((service, key) => (
               <div
-                className='ease-500 m-2 flex flex-row gap-4 p-4 transition-all hover:scale-110'
+                className='ease-500 m-4 flex flex-row gap-4 p-4 transition-all hover:scale-110'
                 key={key}
               >
                 <div className='relative h-10 w-10'>

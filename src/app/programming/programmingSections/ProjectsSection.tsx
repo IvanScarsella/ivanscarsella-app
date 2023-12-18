@@ -7,7 +7,6 @@ import { useEffect, useState } from 'react'
 
 const ProgrammingSection = ({ programmingProjects }: any) => {
   const [projects, setProjects] = useState([])
-  console.log(programmingProjects)
   useEffect(() => {
     setProjects(programmingProjects)
   }, [programmingProjects])
