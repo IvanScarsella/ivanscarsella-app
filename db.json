@@ -1,4 +1,3 @@
-
 {
   "coverVideos": [
     {
@@ -95,6 +94,15 @@
     },
     {
       "data": {
+        "artist": "F20",
+        "song": "Vesania",
+        "genre": "Metal Progresivo",
+        "link": "https://www.youtube.com/watch?v=QBjjdZohf-g&ab_channel=F20"
+      },
+      "src": "https://www.youtube.com/embed/QBjjdZohf-g?si=NV32TSblPMpm7r8F"
+    },
+    {
+      "data": {
         "artist": "M28",
         "song": "Laureles",
         "genre": "Groove Metal, Djent",
@@ -102,6 +110,16 @@
       },
       "src": "https://www.youtube.com/embed/AoL3WiqHMCM?si=IimiCpnlHFgYFti3"
     },
+    {
+      "data": {
+        "artist": "M28",
+        "song": "Ave Negra",
+        "genre": "Groove Metal, Djent",
+        "link": "https://www.youtube.com/watch?v=EcqYsTVJFMk&ab_channel=SuicidaLiveSessions"
+      },
+      "src": "https://www.youtube.com/embed/EcqYsTVJFMk?si=JgT-EdvUPj0g91hz"
+    },
+
     {
       "data": {
         "artist": "Kali Yuga",

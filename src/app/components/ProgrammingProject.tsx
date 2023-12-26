@@ -12,7 +12,7 @@ const YoutubeVideo = ({ src }: any) => {
         src={link}
         title='YouTube video player'
         allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-        className='max-xl:w-full'
+        className='mb-4 rounded-3xl max-xl:w-full'
         allowFullScreen
       ></iframe>
       <Button
@@ -21,7 +21,7 @@ const YoutubeVideo = ({ src }: any) => {
         style={{ backgroundColor: red[900] }}
         target='_blank'
         href='https://www.youtube.com/channel/UC7kHGbpDf0goDHH7cQfF92A?sub_confirmation=1'
-        className='ease-500 mt-6 transition-all hover:scale-125'
+        className='ease-500 transition-all hover:scale-125'
       >
         Suscribirse
       </Button>

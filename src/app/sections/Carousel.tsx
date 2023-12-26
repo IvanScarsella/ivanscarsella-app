@@ -34,12 +34,12 @@ function ImagesCarousel() {
   ]
 
   return (
-    <section className='max-container flex w-full items-center justify-between  text-justify max-xl:flex-col'>
+    <section className='max-container flex w-full items-center justify-between text-justify  max-xl:flex-col xl:p-4'>
       <div className='max-container flex w-full items-center justify-between gap-10 text-justify max-xl:flex-col-reverse'>
         <Carousel
           {...settings}
           className=' flex w-1/2 flex-row
-        max-xl:m-10 max-xl:scale-125 max-xl:justify-center 
+        max-xl:m-10  max-xl:justify-center 
         '
         >
           {images.map((image, index) => (
@@ -52,17 +52,17 @@ function ImagesCarousel() {
                 alt={image.alt}
                 width={500}
                 height={300}
-                className='max-h-full rounded-3xl shadow-lg hover:shadow-2xl'
+                className='max-h-full rounded-3xl shadow-lg grayscale  hover:shadow-2xl'
               />
             </div>
           ))}
         </Carousel>
         <div
           className='info-text ease-500 mt-4 max-h-full w-1/2 rounded-3xl border-2 border-red-700 bg-gradient-to-r from-black to-red-800 p-4 shadow-lg transition-all hover:border-red-500 hover:shadow-2xl
-        max-xl:w-5/6
+        max-lg:w-5/6
         '
         >
-          <p className='leading-8 text-white'>
+          <p className='leading-8 text-white max-sm:text-sm max-sm:leading-6'>
             Como programador, soy graduado del bootcamp Henry. Las tecnologías
             con las que trabajo son:
           </p>
@@ -70,7 +70,7 @@ function ImagesCarousel() {
             {techStack.map((tech, index) => (
               <li
                 key={index}
-                className='ease-500 mt-2 flex items-center gap-4 transition-all hover:text-2xl hover:font-bold hover:underline hover:underline-offset-2 cursor-default'
+                className='ease-500 mt-2 flex cursor-default items-center gap-4 transition-all hover:text-2xl hover:font-bold hover:underline hover:underline-offset-2'
               >
                 <Image
                   src={tool}
@@ -79,7 +79,9 @@ function ImagesCarousel() {
                   height={16}
                   // className='bg-white'
                 />
-                <span className='text-xl uppercase text-white'>{tech}</span>
+                <span className='text-xl uppercase text-white max-sm:text-sm'>
+                  {tech}
+                </span>
               </li>
             ))}
           </ul>

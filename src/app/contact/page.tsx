@@ -31,7 +31,7 @@ const ContactPage = () => {
       <Nav />
       <div className='mx-auto flex max-w-screen-xl flex-col items-center p-4 lg:px-8'>
         <div className='info-text ease-500 m-4 max-h-full w-full rounded-3xl border-2 border-red-700 bg-gradient-to-l from-black to-red-800 p-6 shadow-lg transition-all hover:border-red-500 hover:shadow-2xl'>
-          <h1 className='text-2xl text-white'>
+          <h1 className='text-2xl text-white max-md:text-lg'>
             Estoy abierto a cualquier proyecto, no dudes en contactarme si
             necesitas cualquiera de mis servicios:
           </h1>
@@ -49,7 +49,7 @@ const ContactPage = () => {
                     alt={service.service}
                   />
                 </div>
-                <li className='text-xl tracking-wide text-white max-xl:text-base'>
+                <li className='text-xl tracking-wide text-white max-xl:text-base max-md:text-sm'>
                   {service.service}
                 </li>
               </div>

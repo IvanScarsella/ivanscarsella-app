@@ -15,19 +15,18 @@ const Page = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const coverData = await axios.get("/api/getCoverVideos")
-        const originalData = await axios.get("/api/getOriginalVideos")
-  
+        const coverData = await axios.get('/api/getCoverVideos')
+        const originalData = await axios.get('/api/getOriginalVideos')
+
         setCoverVideos(coverData.data) // Aquí
         setOriginalVideos(originalData.data) // Y aquí
       } catch (error) {
-        console.error("Error fetching data:", error);
+        console.error('Error fetching data:', error)
       }
     }
-  
+
     fetchData()
   }, [])
-  
 
   return (
     <>
@@ -37,15 +36,15 @@ const Page = () => {
           Podés explorar la música en la que he estado trabajando últimamente
         </h1>
       </div>
-      <section className='flex flex-col lg:flex-row'>
-        <div className='w-full lg:w-3/4'>
+      <section className='flex flex-col xl:flex-row'>
+        <div className='w-full xl:w-3/4'>
           <MusicSection sectionName='Covers' musicVideos={coverVideos} />
           <MusicSection
             sectionName='Música Original'
             musicVideos={originalVideos}
           />
         </div>
-        <div className='w-full lg:w-1/4'>
+        <div className='w-full xl:w-1/4'>
           <Spotify />
         </div>
       </section>

@@ -30,7 +30,7 @@ export default function Nav() {
         <>
           <div className='mx-auto max-w-7xl px-2 sm:px-6 lg:px-8'>
             <div className='relative flex h-16 items-center justify-between'>
-              <div className='absolute inset-y-0 left-0 flex items-center sm:hidden'>
+              <div className='absolute inset-y-0 left-0 flex items-center md:hidden'>
                 <Disclosure.Button className='relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white'>
                   <span className='sr-only'>Open main menu</span>
                   <svg
@@ -65,12 +65,12 @@ export default function Nav() {
                   </svg>
                 </Disclosure.Button>
               </div>
-              <div className='flex flex-1 items-center justify-center'>
-                <div className='flex flex-shrink-0 items-center'>
+              <div className='flex flex-1 items-center justify-center '>
+                <div className='flex flex-shrink-0 items-center '>
                   {/* <Image src={logo} alt='logo' width={100} height={100} /> */}
                 </div>
-                <div className='max-container flex items-center justify-between max-sm:hidden'>
-                  <div className='font-palanquin flex space-x-20 tracking-wide'>
+                <div className='max-container flex items-center justify-between max-md:hidden'>
+                  <div className='font-palanquin flex space-x-20 tracking-wide '>
                     {navigation.map((item) => (
                       // <Link key={item.name} href={item.href}>
                       <a
@@ -78,7 +78,7 @@ export default function Nav() {
                           pathname === item.href
                             ? 'bg-red-700 text-white'
                             : 'text-gray-300 hover:bg-gray-700 hover:text-white'
-                        } cursor-pointer rounded-md px-3 py-2 text-lg font-medium`}
+                        } cursor-pointer rounded-md px-3 py-2 text-lg font-medium `}
                         aria-current={item.current ? 'page' : undefined}
                         onClick={() => router.push(item.href)}
                         key={item.name}
@@ -96,7 +96,7 @@ export default function Nav() {
             </div>
           </div>
 
-          <Disclosure.Panel className='sm:hidden'>
+          <Disclosure.Panel className='md:hidden'>
             <Transition
               show={open}
               enter='duration-200 ease-out'
@@ -115,7 +115,7 @@ export default function Nav() {
                       pathname === item.href
                         ? 'bg-red-700 text-white'
                         : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                      'block rounded-md px-3 py-2 text-base font-medium'
+                      'block rounded-md px-3 py-2 text-center text-base font-medium'
                     )}
                     aria-current={item.current ? 'page' : undefined}
                     onClick={() => router.push(item.href)}

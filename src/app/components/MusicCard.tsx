@@ -5,7 +5,7 @@ import YoutubeVideo from './ProgrammingProject'
 const MusicCard = ({ video }: any) => {
   return (
     <div className='ease-500 flex w-10/12 flex-row flex-wrap items-center justify-between rounded-3xl border-4 border-neutral-500 bg-opacity-10 bg-gradient-to-r from-black to-red-800 p-4 transition-all hover:scale-110 hover:shadow-2xl max-xl:w-full max-xl:flex-col'>
-      <div className='ease-500 ml-24 rounded-3xl bg-gradient-to-l from-black to-red-800 transition-all hover:scale-110 hover:shadow-2xl max-2xl:ml-0'>
+      <div className='ease-500 ml-24 rounded-3xl bg-gradient-to-l from-black to-red-800 transition-all hover:scale-110 hover:shadow-2xl max-2xl:ml-0 max-xl:w-10/12'>
         <YoutubeVideo key={video.data} src={video.src.toString()} />
       </div>
 

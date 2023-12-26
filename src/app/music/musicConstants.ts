@@ -110,8 +110,8 @@
 const apiUrl =
   process.env.NODE_ENV === 'development'
     ? 'http://localhost:4000' // URL local para desarrollo
-    // : 'https://ivanscarsella.com'
-    : 'https://www.ivanscarsella.com.ar/'
+    : // : 'https://ivanscarsella.com'
+      'https://www.ivanscarsella.com.ar/'
 
 export const fetchVideos = async (sectionName: string) => {
   const response = await fetch(`${apiUrl}/${sectionName}`)
@@ -124,10 +124,6 @@ export const fetchProjects = async () => {
   return data
 }
 // PROBAR DE HACER UNA RUTA EN PAGES/API QUE IMPLEMENTE ESTA FUNCION A VER SI SE FUNCIONA EL DEPLOY
-
-
-
-
 
 // export const fetchOriginalVideos = async () => {
 //   const response = await fetch('http://localhost:4000/originalVideos');

@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <main>
       <Nav />
-      <section className='flex justify-center'>
+      <section className='flex justify-center '>
         <Title />
       </section>
       <section className='xl:padding-1 wide:padding-r padding-b'>

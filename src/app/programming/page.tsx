@@ -11,7 +11,7 @@ const page = () => {
   const [programmingProjects, setProgrammingProjects] = useState([])
   useEffect(() => {
     const fetchData = async () => {
-      const projectsData = await axios.get("/api/getProjects")
+      const projectsData = await axios.get('/api/getProjects')
       setProgrammingProjects(projectsData.data)
     }
     fetchData()

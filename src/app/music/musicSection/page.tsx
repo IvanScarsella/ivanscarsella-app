@@ -13,21 +13,25 @@ const MusicSection = ({ sectionName, musicVideos }: any) => {
     }
   }, [musicVideos])
 
-  const showMoreButton:boolean = musicVideos ? renderVideos.length < musicVideos.length : false
-  const showLessButton:boolean = renderVideos.length > 5
+  const showMoreButton: boolean = musicVideos
+    ? renderVideos.length < musicVideos.length
+    : false
+  const showLessButton: boolean = renderVideos.length > 5
 
   return (
     <div className='m-4 flex flex-col border-y-2 border-stone-800 p-8 text-center text-white'>
       <div className='m-8'>
         <h2 className='font-palanquin text-4xl font-semibold'>{sectionName}</h2>
       </div>
-      <ul className='flex flex-1 flex-col items-center gap-12 p-10'>
+      <ul className='flex flex-1 flex-col items-center gap-12 max-sm:p-0'>
         {renderVideos.map((video: any, index: any) => (
           <MusicCard key={index} video={video} />
         ))}
-        {musicVideos ? <p className='italic'>
-          Mostrando {renderVideos.length} de {musicVideos.length}
-        </p> : null}
+        {musicVideos ? (
+          <p className='italic'>
+            Mostrando {renderVideos.length} de {musicVideos.length}
+          </p>
+        ) : null}
       </ul>
       <div className='line-clamp-1 flex flex-1 flex-col items-center'>
         {showMoreButton && (

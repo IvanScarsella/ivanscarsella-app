@@ -18,7 +18,7 @@ const ProgrammingSection = ({ programmingProjects }: any) => {
           Proyectos
         </h1>
       </div>
-      <ul className='flex flex-1 flex-col items-center gap-12 p-10'>
+      <ul className='flex flex-1 flex-col items-center gap-12 p-4'>
         {projects.map((project: any, index: any) => (
           <ProjectCard key={index} project={project} />
         ))}
