@@ -31,8 +31,8 @@ const Page = () => {
   return (
     <>
       <Nav />
-      <div className='m-8 text-center'>
-        <h1 className='font-palanquin text-4xl font-semibold text-white'>
+      <div className='text-center mt-24'>
+        <h1 className='font-palanquin text-4xl font-semibold text-white max-lg:text-3xl max-sm:text-2xl'>
           Podés explorar la música en la que he estado trabajando últimamente
         </h1>
       </div>

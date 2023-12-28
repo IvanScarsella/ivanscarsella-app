@@ -29,7 +29,7 @@ const ContactPage = () => {
   return (
     <>
       <Nav />
-      <div className='mx-auto flex max-w-screen-xl flex-col items-center p-4 lg:px-8'>
+      <div className='mx-auto flex max-w-screen-xl flex-col items-center p-4 lg:px-8 mt-14'>
         <div className='info-text ease-500 m-4 max-h-full w-full rounded-3xl border-2 border-red-700 bg-gradient-to-l from-black to-red-800 p-6 shadow-lg transition-all hover:border-red-500 hover:shadow-2xl'>
           <h1 className='text-2xl text-white max-md:text-lg'>
             Estoy abierto a cualquier proyecto, no dudes en contactarme si

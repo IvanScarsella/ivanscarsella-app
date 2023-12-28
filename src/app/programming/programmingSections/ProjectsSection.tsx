@@ -22,7 +22,7 @@ const ProgrammingSection = ({ programmingProjects }: any) => {
   return (
     <>
       <div className='flex flex-col border-y-2 border-stone-800 p-8 text-center'>
-        <div className='m-8'>
+        <div className='mt-14'>
           <h1 className='font-palanquin text-4xl font-semibold text-white'>
             Proyectos
           </h1>
