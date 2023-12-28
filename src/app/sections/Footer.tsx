@@ -11,6 +11,10 @@ import footerLogo from '../../../assets/images/ivanlogo_chico.png'
 
 const footerLinks = [
   {
+    title: 'Inicio',
+    link: '/',
+  },
+  {
     title: 'Música',
     link: '/music',
   },

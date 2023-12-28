@@ -39,7 +39,7 @@ function ImagesCarousel() {
         <Carousel
           {...settings}
           className=' flex w-1/2 flex-row
-        max-xl:m-10  max-xl:justify-center 
+        max-xl:m-10  max-xl:justify-center max-lg:w-2/3
         '
         >
           {images.map((image, index) => (
@@ -52,7 +52,7 @@ function ImagesCarousel() {
                 alt={image.alt}
                 width={500}
                 height={300}
-                className='max-h-full rounded-3xl shadow-lg grayscale  hover:shadow-2xl'
+                className='max-h-full rounded-3xl shadow-lg grayscale  hover:shadow-2xl '
               />
             </div>
           ))}

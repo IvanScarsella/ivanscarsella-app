@@ -40,8 +40,8 @@ const Principal = () => {
       <div className='flex w-1/2 flex-1 flex-wrap items-center justify-center max-lg:w-3/4'>
         <Image
           src={imagen_inicio}
-          alt='shoe8'
-          width={570}
+          alt='imagen principal'
+          width={570 - 57*2.5}
           height={522}
           className='h-full rounded-3xl object-contain shadow-lg  contrast-125 grayscale hover:shadow-2xl'
         />
