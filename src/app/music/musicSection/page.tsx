@@ -6,10 +6,14 @@ import { useState, useEffect } from 'react'
 
 const MusicSection = ({ sectionName, musicVideos }: any) => {
   const [renderVideos, setRenderVideos] = useState([])
+  const [loading, setLoading] = useState(true);
+  
 
   useEffect(() => {
     if (musicVideos) {
+      setLoading(true);
       setRenderVideos(musicVideos.slice(0, 5))
+      setLoading(false);
     }
   }, [musicVideos])
 
@@ -24,9 +28,11 @@ const MusicSection = ({ sectionName, musicVideos }: any) => {
         <h2 className='font-palanquin text-4xl font-semibold'>{sectionName}</h2>
       </div>
       <ul className='flex flex-1 flex-col items-center gap-12 max-sm:p-0'>
-        {renderVideos.map((video: any, index: any) => (
-          <MusicCard key={index} video={video} />
-        ))}
+        {loading ?
+          <div className="loader"></div> :
+          renderVideos.map((video: any, index: any) => (
+            <MusicCard key={index} video={video} />
+          ))}
         {musicVideos ? (
           <p className='italic'>
             Mostrando {renderVideos.length} de {musicVideos.length}
