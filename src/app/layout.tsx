@@ -1,5 +1,5 @@
 import { Inter } from 'next/font/google'
-import './globals.css' // Puedes reemplazar esto con el enfoque que uses para cargar tus estilos globales
+import './globals.css'
 import icon from './icon.ico'
 
 const inter = Inter({ subsets: ['latin'] })
