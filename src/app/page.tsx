@@ -4,6 +4,7 @@ import Carousel from './sections/Carousel'
 // import Contact from "./contact/contactForm/Contact"
 import Principal from './sections/Principal'
 import Title from './sections/Title'
+import Certificates from './sections/Certificates'
 
 export default function Home() {
   return (
@@ -18,7 +19,9 @@ export default function Home() {
       <section>
         <Carousel />
       </section>
-      <section className='flex justify-center'>{/* <Contact /> */}</section>
+      <section className=''>
+        <Certificates/>
+      </section>
       <section>
         <Footer />
       </section>
