@@ -5,7 +5,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import Image from 'next/image'
 import imagen1 from '../../../public/imagen_carrusel_1.jpg'
 import imagen2 from '../../../public/imagen_carrusel_2.jpg'
-import imagen3 from '../../../public/imagen_carrusel_3.jpg'
+import imagen3 from '../../../public/imagen_carrusel_3.jpeg'
 import imagen4 from '../../../public/imagen_carrusel_4.jpg'
 import tool from '../../../public/tool.png'
 
