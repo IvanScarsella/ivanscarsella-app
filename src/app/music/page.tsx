@@ -31,12 +31,12 @@ const Page = () => {
   return (
     <>
       <Nav />
-      <div className='text-center mt-24'>
-        <h1 className='font-palanquin text-4xl font-semibold text-white max-lg:text-3xl max-sm:text-2xl'>
+      <div className='relative z-10 mt-16 text-center'>
+        <h1 className='font-palanquin z-10 p-4 text-4xl font-semibold text-black dark:text-white max-lg:text-3xl max-sm:text-2xl'>
           Podés explorar la música en la que he estado trabajando últimamente
         </h1>
       </div>
-      <section className='flex flex-col xl:flex-row'>
+      <section className='relative z-10 flex flex-col xl:flex-row'>
         <div className='w-full xl:w-3/4'>
           <MusicSection sectionName='Covers' musicVideos={coverVideos} />
           <MusicSection

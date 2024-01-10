@@ -20,7 +20,7 @@ const page = () => {
   return (
     <>
       <Nav />
-      <section>
+      <section className='relative z-10'>
         <ProjectsSection programmingProjects={programmingProjects} />
       </section>
       <Footer />

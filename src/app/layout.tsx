@@ -1,6 +1,7 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
 import icon from './icon.ico'
+import ThemeProvider from '@/app/components/ThemeProvider/ThemeProvider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -24,17 +25,19 @@ export default function RootLayout({
           }
         `}</style>
       </head>
-      <body
-        className={`${inter.className} relative bg-gradient-to-br from-bordo to-black`}
-      >
-        <div className='content-container relative z-10'>{children}</div>
-        <div
-          className='fixed left-0 top-0 z-[-1] h-full w-full bg-cover bg-center bg-no-repeat opacity-20 invert'
-          style={{
-            backgroundImage:
-              'url("https://64.media.tumblr.com/c065bd8029c005960f465d1478e0b9f0/tumblr_nhep76DdW41rjledmo1_500.gifv")',
-          }}
-        ></div>
+      <body className={`${inter.className} relative`}>
+        <ThemeProvider>
+          <div className='content-container z-1 relative bg-gradient-to-tl from-red-700 to-slate-200 dark:bg-gradient-to-br dark:from-bordo dark:to-black'>
+            {children}
+          </div>
+          <div
+            className='fixed left-0 top-0 z-[0] h-full w-full bg-cover bg-center bg-no-repeat opacity-20 invert'
+            style={{
+              backgroundImage:
+                'url("https://64.media.tumblr.com/c065bd8029c005960f465d1478e0b9f0/tumblr_nhep76DdW41rjledmo1_500.gifv")',
+            }}
+          ></div>
+        </ThemeProvider>
       </body>
     </html>
   )

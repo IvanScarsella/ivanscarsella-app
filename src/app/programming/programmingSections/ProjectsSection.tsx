@@ -15,7 +15,7 @@ const ProgrammingSection = ({ programmingProjects }: any) => {
 
   useEffect(() => {
     if (programmingProjects && Object.keys(programmingProjects).length > 0) {
-      setLoading(false);
+      setLoading(false)
     }
   }, [programmingProjects])
 
@@ -23,19 +23,18 @@ const ProgrammingSection = ({ programmingProjects }: any) => {
     <>
       <div className='flex flex-col border-y-2 border-stone-800 p-8 text-center'>
         <div className='mt-14'>
-          <h1 className='font-palanquin text-4xl font-semibold text-white'>
+          <h1 className='font-palanquin text-4xl font-semibold text-black dark:text-white'>
             Proyectos
           </h1>
         </div>
         <ul className='flex flex-1 flex-col items-center gap-12 p-4'>
-
-          {loading ? <div className='loader'></div> :
-            
-              projects.map((project: any, index: any) => (
-                <ProjectCard key={index} project={project} />
-              ))
-            }
-          
+          {loading ? (
+            <div className='loader'></div>
+          ) : (
+            projects.map((project: any, index: any) => (
+              <ProjectCard key={index} project={project} />
+            ))
+          )}
         </ul>
       </div>
     </>

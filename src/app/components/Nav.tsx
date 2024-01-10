@@ -1,12 +1,13 @@
 'use client'
 
-import { Fragment } from 'react'
 import { Disclosure, Transition } from '@headlessui/react'
 import { usePathname, useRouter } from 'next/navigation'
-import { useState } from 'react'
+import { useState, useContext, Fragment } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import logo from '../../../assets/images/ivanlogo_chico.png'
+import ThemeContext from '@/app/components/context/themeContext'
+import { MdDarkMode, MdOutlineLightMode } from 'react-icons/md'
 
 const navigation = [
   { name: 'Inicio', href: '/', current: true },
@@ -23,9 +24,13 @@ export default function Nav() {
   const router = useRouter()
   const pathname = usePathname()
   const [enabled, setEnabled] = useState(false)
+  const { darkTheme, setDarkTheme } = useContext(ThemeContext)
 
   return (
-    <Disclosure as='nav' className='bg-black fixed w-full  top-0 z-50'>
+    <Disclosure
+      as='nav'
+      className='fixed top-0 z-50 w-full  bg-slate-100 dark:bg-black'
+    >
       {({ open }) => (
         <>
           <div className='mx-auto max-w-7xl px-2 sm:px-6 lg:px-8'>
@@ -77,7 +82,7 @@ export default function Nav() {
                         className={`${
                           pathname === item.href
                             ? 'bg-red-700 text-white'
-                            : 'text-gray-300 hover:bg-gray-700 hover:text-white'
+                            : 'text-black hover:bg-gray-700 hover:text-white dark:text-gray-300'
                         } cursor-pointer rounded-md px-3 py-2 text-lg font-medium `}
                         aria-current={item.current ? 'page' : undefined}
                         onClick={() => router.push(item.href)}
@@ -91,12 +96,32 @@ export default function Nav() {
                 </div>
               </div>
               <div className='absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0'>
-                {/* Tu código del botón de notificaciones y switch aquí */}
+                <a className='ml-2 hover:scale-150'>
+                  {darkTheme ? (
+                    <MdOutlineLightMode
+                      className='cursor-pointer  rounded-full  hover:bg-slate-900'
+                      title='Activar tema claro'
+                      onClick={() => {
+                        setDarkTheme(false)
+                        localStorage.removeItem('hotel-theme')
+                      }}
+                    />
+                  ) : (
+                    <MdDarkMode
+                      className='cursor-pointer  rounded-full   hover:bg-slate-100'
+                      title='Activar tema oscuro'
+                      onClick={() => {
+                        setDarkTheme(true)
+                        localStorage.setItem('hotel-theme', 'true')
+                      }}
+                    />
+                  )}
+                </a>
               </div>
             </div>
           </div>
 
-          <Disclosure.Panel className='md:hidden'>
+          <Disclosure.Panel className='md:hidden '>
             <Transition
               show={open}
               enter='duration-200 ease-out'
@@ -106,7 +131,7 @@ export default function Nav() {
               leaveFrom='opacity-100 scale-100'
               leaveTo='opacity-0 scale-95'
             >
-              <div className='space-y-1 px-2 pb-3 pt-2'>
+              <div className='space-y-1 px-2 pb-3 pt-2 '>
                 {navigation.map((item) => (
                   <a
                     key={item.name}
@@ -114,7 +139,7 @@ export default function Nav() {
                     className={classNames(
                       pathname === item.href
                         ? 'bg-red-700 text-white'
-                        : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                        : 'text-black hover:bg-gray-700 hover:text-white dark:text-gray-300',
                       'block rounded-md px-3 py-2 text-center text-base font-medium'
                     )}
                     aria-current={item.current ? 'page' : undefined}

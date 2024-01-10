@@ -52,17 +52,17 @@ function ImagesCarousel() {
                 alt={image.alt}
                 width={500}
                 height={300}
-                className='max-h-full rounded-3xl shadow-lg grayscale  hover:shadow-2xl '
+                className='max-h-full rounded-3xl shadow-lg filter-none hover:shadow-2xl dark:grayscale '
               />
             </div>
           ))}
         </Carousel>
         <div
-          className='info-text ease-500 mt-4 max-h-full w-1/2 rounded-3xl border-2 border-red-700 bg-gradient-to-r from-black to-red-800 p-4 shadow-lg transition-all hover:border-red-500 hover:shadow-2xl
+          className='info-text ease-500 mt-4 max-h-full w-1/2 rounded-3xl border-2 border-black bg-gradient-to-l from-white to-red-800 p-4 shadow-lg transition-all hover:border-red-500 hover:shadow-2xl dark:border-red-700 dark:bg-gradient-to-r dark:from-black dark:to-red-800
         max-lg:w-5/6
         '
         >
-          <p className='leading-8 text-white max-sm:text-sm max-sm:leading-6'>
+          <p className='leading-8 text-black dark:text-white max-sm:text-sm max-sm:leading-6'>
             Como programador, soy graduado del bootcamp Henry. Las tecnologías
             con las que trabajo son:
           </p>
@@ -79,7 +79,7 @@ function ImagesCarousel() {
                   height={16}
                   // className='bg-white'
                 />
-                <span className='text-xl uppercase text-white max-sm:text-sm'>
+                <span className='text-xl uppercase text-black dark:text-white max-sm:text-sm'>
                   {tech}
                 </span>
               </li>

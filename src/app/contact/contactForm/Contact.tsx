@@ -60,10 +60,13 @@ const Contact = () => {
 
   return (
     <div className='mx-auto flex max-w-screen-xl flex-col items-center p-4 lg:px-8'>
-      <div className='info-text ease-500 m-4 max-h-full w-full rounded-3xl border-2 border-red-700 bg-gradient-to-r from-black to-red-800 p-4 shadow-lg transition-all hover:border-red-500 hover:shadow-2xl'>
-        <form onSubmit={handleSubmit} className='flex flex-col'>
+      <div className='info-text ease-500 m-4 max-h-full w-full rounded-3xl border-2 border-red-700 bg-gradient-to-r from-red-800 to-slate-100 p-4 shadow-lg transition-all hover:border-red-500 hover:shadow-2xl dark:from-black dark:to-red-800'>
+        <form
+          onSubmit={handleSubmit}
+          className='flex flex-col text-black dark:text-slate-100'
+        >
           <div className='m-2 flex flex-col items-center'>
-            <label htmlFor='subject' className='text-slate-100'>
+            <label htmlFor='subject' className=''>
               Nombre:
             </label>
             <input
@@ -72,11 +75,11 @@ const Contact = () => {
               name='subject'
               value={formData.subject}
               onChange={handleChange}
-              className='w-full min-w-[450px] rounded p-2 max-md:min-w-[250px]'
+              className='w-full min-w-[450px] rounded p-2 text-black max-md:min-w-[250px]'
             />
           </div>
           <div className='m-2 flex flex-col items-center'>
-            <label htmlFor='email' className='text-slate-100'>
+            <label htmlFor='email' className=''>
               Email:
             </label>
             <input
@@ -85,12 +88,12 @@ const Contact = () => {
               name='email'
               value={formData.email}
               onChange={handleChange}
-              className='w-full rounded p-2'
+              className='w-full rounded p-2 text-black'
             />
           </div>
 
           <div className='m-2 flex flex-col items-center'>
-            <label htmlFor='message' className='text-slate-100'>
+            <label htmlFor='message' className=''>
               Motivo de la consulta:
             </label>
             <textarea
@@ -98,7 +101,7 @@ const Contact = () => {
               name='message'
               value={formData.message}
               onChange={handleChange}
-              className='h-[200px] w-full rounded p-2'
+              className='h-[200px] w-full rounded p-2 text-black'
             />
           </div>
           <button

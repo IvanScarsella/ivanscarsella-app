@@ -8,9 +8,9 @@ import Certificates from './sections/Certificates'
 
 export default function Home() {
   return (
-    <main>
+    <main className='relative z-10'>
       <Nav />
-      <section className='flex justify-center '>
+      <section className='flex justify-center'>
         <Title />
       </section>
       <section className='xl:padding-1 wide:padding-r padding-b'>
@@ -20,7 +20,7 @@ export default function Home() {
         <Carousel />
       </section>
       <section className=''>
-        <Certificates/>
+        <Certificates />
       </section>
       <section>
         <Footer />

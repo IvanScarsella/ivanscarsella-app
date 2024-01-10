@@ -55,8 +55,8 @@ const Footer = () => {
   const router = useRouter()
 
   return (
-    <footer className='mt-4 bg-black text-gray-300'>
-      <div className='mx-auto flex max-w-screen-xl flex-col items-start justify-around p-4 lg:px-8'>
+    <footer className='relative z-10 mt-4 bg-white text-black dark:bg-black dark:text-gray-300'>
+      <div className='mx-auto flex max-w-screen-xl flex-col items-start justify-around p-4 lg:px-8 '>
         <div className='mx-auto mb-8  flex flex-col items-start lg:mb-0'>
           {/* <Link href='/'>
             <div>
@@ -64,13 +64,13 @@ const Footer = () => {
             </div>
           </Link> */}
           <div className='mt-6 flex flex-row items-center gap-5 lg:mt-0 '>
-            <p className='font-montserrat text-white-400 text-base leading-7 lg:max-w-sm'>
+            <p className='font-montserrat text-white-400 z-10 text-base leading-7  lg:max-w-sm'>
               Redes sociales:
             </p>
-            <div className='flex items-center gap-5 '>
+            <div className='z-10 flex items-center  gap-5'>
               {socialMedia.map((icon, index) => (
                 <Link key={index} target='_blank' href={icon.link}>
-                  <div className='flex h-12 w-12 items-center justify-center rounded-full bg-white hover:bg-gray-700 hover:text-white'>
+                  <div className='flex h-12 w-12 items-center justify-center rounded-full bg-white hover:bg-gray-400 hover:text-white dark:hover:bg-gray-700 '>
                     <Image
                       src={icon.src}
                       alt={icon.alt}
@@ -87,7 +87,7 @@ const Footer = () => {
           {footerLinks.map((section) => (
             <div key={section.title} className='flex flex-col'>
               <h4
-                className='font-montserrat mb-4 cursor-pointer rounded-md px-3 py-2 text-2xl font-medium leading-normal text-white hover:bg-gray-700 max-sm:text-base '
+                className='font-montserrat z-10 mb-4 cursor-pointer rounded-md px-3 py-2 text-2xl font-medium leading-normal text-black hover:bg-gray-400 dark:text-white dark:hover:bg-gray-700  max-sm:text-base'
                 onClick={() => router.push(section.link)}
               >
                 {section.title}
@@ -98,7 +98,7 @@ const Footer = () => {
       </div>
 
       <div className='text-white-400'>
-        <div className='font-montserrat mx-auto flex max-w-screen-xl flex-col items-center justify-between text-sm'>
+        <div className='font-montserrat z-10 mx-auto flex max-w-screen-xl flex-col items-center justify-between  text-sm'>
           <p>&copy; 2024 Iván Scarsella. Todos los derechos reservados.</p>
         </div>
       </div>

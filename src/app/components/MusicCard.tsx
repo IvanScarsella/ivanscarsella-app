@@ -9,15 +9,17 @@ const MusicCard = ({ video }: any) => {
 
   useEffect(() => {
     if (video && Object.keys(video).length > 0) {
-      setLoading(false);
+      setLoading(false)
     }
   }, [video])
-  
+
   return (
     <>
-      {loading ? <div className='loader'></div> :
-        <div className='ease-500 flex w-10/12 flex-row flex-wrap items-center justify-between rounded-3xl border-4 border-neutral-500 bg-opacity-10 bg-gradient-to-r from-black to-red-800 p-4 transition-all hover:scale-110 hover:shadow-2xl max-xl:w-full max-xl:flex-col'>
-          <div className='ease-500 ml-24 rounded-3xl bg-gradient-to-l from-black to-red-800 transition-all hover:scale-110 hover:shadow-2xl max-2xl:ml-0 max-xl:w-10/12'>
+      {loading ? (
+        <div className='loader'></div>
+      ) : (
+        <div className='ease-500 flex w-10/12 flex-row flex-wrap items-center justify-between rounded-3xl border-4 border-black bg-opacity-10 bg-gradient-to-r from-red-800 to-white p-4 transition-all hover:scale-110 hover:shadow-2xl dark:border-neutral-500 dark:from-black dark:to-red-800 max-xl:w-full max-xl:flex-col'>
+          <div className='ease-500 ml-24 rounded-3xl bg-gradient-to-l from-red-800 to-white transition-all hover:scale-110 hover:shadow-2xl dark:from-black dark:to-red-800 max-2xl:ml-0 max-xl:w-10/12'>
             <YoutubeVideo key={video.data} src={video.src.toString()} />
           </div>
 
@@ -27,17 +29,17 @@ const MusicCard = ({ video }: any) => {
                 {' '}
                 Artista: &nbsp;
               </h2>
-              <span className='text-4xl font-bold text-slate-100 hover:scale-125 max-xl:text-2xl'>
+              <span className='text-4xl font-bold text-black hover:scale-125 dark:text-slate-100 max-xl:text-2xl'>
                 {video.data.artist}
               </span>
               <h2 className='flex text-xl font-bold max-xl:text-base'>
                 {' '}
                 Canción: &nbsp;
               </h2>
-              <span className='text-3xl font-bold text-slate-100 hover:scale-125 max-xl:text-2xl'>
+              <span className='text-3xl font-bold text-black hover:scale-125 dark:text-slate-100 max-xl:text-2xl'>
                 "{video.data.song}"
               </span>
-              <h3 className='flex text-center text-xl text-slate-200 max-xl:text-base'>
+              <h3 className='flex text-center text-xl text-black dark:text-slate-200 max-xl:text-base'>
                 {video.data.genre}
               </h3>
               <Button
@@ -47,7 +49,8 @@ const MusicCard = ({ video }: any) => {
               />
             </div>
           </div>
-        </div>}
+        </div>
+      )}
     </>
   )
 }
