@@ -132,6 +132,19 @@
   ],
   "programmingProjects": [
     {
+      "name": "Hotel Management",
+      "description": "Es una aplicación para reservar hoteles. Incluye Sanity.IO para la base de datos, comentarios y puntuación del hotel de parte del usuario, reserva de habitaciones, pagos online con Stripe, Dark Mode, Búsqueda y filtros por nombre y tipo de habitación, autenticación con Auth.js, estilos con Tailwind CSS.",
+      "link": "https://hotel-management-phi.vercel.app/",
+      "techStack": [
+        { "src": "next_icon.svg", "name": "Next Js" },
+        { "src": "typescript_icon.png", "name": "TypeScript" },
+        { "src": "tailwind_icon.webp", "name": "Tailwind" },
+        { "src": "sanity_icon.png", "name": "Sanity.io" },
+        { "src": "stripe_icon.png", "name": "Stripe" }
+      ],
+      "image": "/projectImages/hotelManagement.png"
+    },
+    {
       "name": "Zingoni Propiedades",
       "description": "Sitio web desarrollado para la inmobiliaria Zingoni Propiedades. Contiene filtros de búsqueda, carrusel con las propiedades destacadas, páginas de contacto con la posibilidad de enviar mails y geoubicación con Google Maps.",
       "link": "https://zingonipropiedades.com.ar",
