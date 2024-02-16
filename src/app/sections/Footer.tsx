@@ -42,7 +42,7 @@ const socialMedia = [
   {
     src: linkedin,
     alt: 'linkedin logo',
-    link: 'https://www.linkedin.com/in/iv%C3%A1n-scarsella-126a18261/',
+    link: 'https://www.linkedin.com/in/ivan-scarsella/',
   },
   {
     src: github,
