@@ -2,8 +2,14 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import icon from './icon.ico'
 import ThemeProvider from '@/app/components/ThemeProvider/ThemeProvider'
+import type { Metadata } from 'next';
 
 const inter = Inter({ subsets: ['latin'] })
+
+export const metadata: Metadata = {
+  title: 'Iván Scarsella - Desarrollador Web - Músico',
+  description: 'Desarrollador experto en la creación de sitios web personalizados. Músico con amplia experiencia en diversos estilos musicales. En esta página encontrarás todo mi trabajo en ambas ramas. Si necesitás cualquiera de mis servicios, no dudes en contactarme. ',
+};
 
 export default function RootLayout({
   children,
@@ -27,7 +33,7 @@ export default function RootLayout({
       </head>
       <body className={`${inter.className} relative`}>
         <ThemeProvider>
-          <div className='content-container z-1 relative bg-gradient-to-tl from-red-700 to-slate-200 dark:bg-gradient-to-br dark:from-bordo dark:to-black'>
+          <div className='content-container  min-h-screen z-1 relative bg-gradient-to-tl from-red-700 to-slate-200 dark:bg-gradient-to-br dark:from-bordo dark:to-black'>
             {children}
           </div>
           <div

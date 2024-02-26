@@ -29,6 +29,7 @@ function ImagesCarousel() {
     'CSS',
     'PostgreSQL',
     'Prisma',
+    'Figma',
     'Node',
     'Git',
   ]
@@ -77,7 +78,7 @@ function ImagesCarousel() {
                   alt={tech}
                   width={16}
                   height={16}
-                  // className='bg-white'
+                // className='bg-white'
                 />
                 <span className='text-xl uppercase text-black dark:text-white max-sm:text-sm'>
                   {tech}
