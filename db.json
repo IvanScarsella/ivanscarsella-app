@@ -141,6 +141,18 @@
   ],
   "programmingProjects": [
     {
+      "name": "Vinoteca Madrecepa",
+      "description": "Aplicación realizada para mostrar el catálogo de productos de una vinoteca. Posee filtros combinados, búsqueda, administración de base de datos, ubicación y carrusel de productos destacados.",
+      "link": "https://vinotecamadrecepa.com.ar/",
+      "techStack": [
+        { "src": "next_icon.svg", "name": "Next Js" },
+        { "src": "typescript_icon.png", "name": "TypeScript" },
+        { "src": "tailwind_icon.webp", "name": "Tailwind" },
+        { "src": "figma_icon.png", "name": "Figma" }
+      ],
+      "image": "/projectImages/vinotecaMadrecepa.png"
+    },
+    {
       "name": "Hotel Management",
       "description": "Es una aplicación para reservar hoteles. Incluye Sanity.IO para la base de datos, comentarios y puntuación del hotel de parte del usuario, reserva de habitaciones, pagos online con Stripe, Dark Mode, Búsqueda y filtros por nombre y tipo de habitación, autenticación con Auth.js, estilos con Tailwind CSS.",
       "link": "https://hotel-management-phi.vercel.app/",

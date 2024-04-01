@@ -10,7 +10,11 @@ const ProgrammingSection = ({ programmingProjects }: any) => {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    setProjects(programmingProjects)
+    if (programmingProjects) {
+      setLoading(true)
+      setProjects(programmingProjects.slice(0, 5))
+      setLoading(true)
+    }
   }, [programmingProjects])
 
   useEffect(() => {
@@ -18,6 +22,11 @@ const ProgrammingSection = ({ programmingProjects }: any) => {
       setLoading(false)
     }
   }, [programmingProjects])
+
+  const showMoreButton: boolean = programmingProjects
+    ? projects.length < programmingProjects.length
+    : false
+  const showLessButton: boolean = projects.length > 5
 
   return (
     <>
@@ -35,7 +44,30 @@ const ProgrammingSection = ({ programmingProjects }: any) => {
               <ProjectCard key={index} project={project} />
             ))
           )}
+          {programmingProjects ? (
+            <p className='italic'>
+              Mostrando {projects.length} de {programmingProjects.length}
+            </p>
+          ) : null}
         </ul>
+        <div className='line-clamp-1 flex flex-1 flex-col items-center'>
+          {showMoreButton && (
+            <button
+              onClick={() => setProjects(programmingProjects)}
+              className='ease-500 rounded-md bg-red-700 p-3 text-xl text-white transition-all hover:scale-125 hover:shadow-2xl'
+            >
+              Ver más...
+            </button>
+          )}
+          {showLessButton && (
+            <button
+              onClick={() => setProjects(programmingProjects.slice(0, 5))}
+              className='ease-500 rounded-md bg-red-700 p-3 text-xl text-white transition-all hover:scale-125 hover:shadow-2xl'
+            >
+              Ver menos...
+            </button>
+          )}
+        </div>
       </div>
     </>
   )
