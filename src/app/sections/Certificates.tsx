@@ -45,7 +45,7 @@ const Certificates = () => {
           return (
             <div
               key={index}
-              className='mb-8 flex w-1/2 flex-shrink-0 flex-col  items-center hover:scale-150 md:w-1/3 lg:w-1/4 xl:w-1/6'
+              className='mb-8 flex w-1/2 flex-shrink-0 flex-col  items-center  md:w-1/3 lg:w-1/4 xl:w-1/6'
             >
               <Image
                 src={image.src}
@@ -53,7 +53,7 @@ const Certificates = () => {
                 width={imageHeight * 1.6667}
                 height={imageHeight}
                 objectFit='cover'
-                className=' shadow-lg hover:shadow-2xl'
+                className=' shadow-lg hover:shadow-2xl hover:scale-150'
               />
               <p className='whitespace-pre-line text-center text-sm font-bold text-black dark:text-white max-sm:text-xs'>
                 {image.alt}
