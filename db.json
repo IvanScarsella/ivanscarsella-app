@@ -207,6 +207,17 @@
       "image": "/projectImages/nikeLandingPage.png"
     },
     {
+      "name": "Clarifion Upsell",
+      "description": "Maqueta de aclaración de compra de producto realizada en Next js y aplicando estilos con Tailwind.",
+      "link": "https://clarifion-upsell-cyan.vercel.app/",
+      "techStack": [
+        { "src": "javascript_icon.png", "name": "JavaScript" },
+        { "src": "next_icon.svg", "name": "Next Js" },
+        { "src": "tailwind_icon.webp", "name": "Tailwind" }
+      ],
+      "image": "/projectImages/clarifionUpsell.png"
+    },
+    {
       "name": "Conversor de Números Romanos",
       "description": "Aplicación creada para traducir números decimales a romanos y viceversa.",
       "link": "https://conversor-de-numeros-romanos-l7ms-ivanscarsella.vercel.app/",
