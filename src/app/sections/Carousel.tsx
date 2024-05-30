@@ -20,6 +20,7 @@ function ImagesCarousel() {
   const techStack = [
     'React',
     'Next js',
+    'Angular',
     'Redux',
     'JavaScript',
     'TypeScript',

@@ -104,6 +104,15 @@
     {
       "data": {
         "artist": "F20",
+        "song": "Estupor",
+        "genre": "Metal Progresivo",
+        "link": "https://www.youtube.com/watch?v=MBZlhgxol6c&ab_channel=F20"
+      },
+      "src": "https://www.youtube.com/embed/MBZlhgxol6c?si=nu6MKC7exJRaTGqC"
+    },
+    {
+      "data": {
+        "artist": "F20",
         "song": "Vesania",
         "genre": "Metal Progresivo",
         "link": "https://www.youtube.com/watch?v=QBjjdZohf-g&ab_channel=F20"
@@ -205,6 +214,17 @@
         { "src": "tailwind_icon.webp", "name": "Tailwind" }
       ],
       "image": "/projectImages/nikeLandingPage.png"
+    },
+    {
+      "name": "Lista de Tareas - Angular 17",
+      "description": "Lista de tareas clásica para desarrollar mi primer proyecto trabajando con Angular 17.",
+      "link": "https://lista-tareas-angular-17-ivanscarsella.netlify.app/",
+      "techStack": [
+        { "src": "angular_icon.png", "name": "Angular" },
+        { "src": "css.png", "name": "CSS" },
+        { "src": "typescript_icon.png", "name": "TypeScript" }
+      ],
+      "image": "/projectImages/listaDeTareasAngular.png"
     },
     {
       "name": "Clarifion Upsell",
