@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Palanquin:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Megrim&family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Megrim&family=Mina:wght@400;700&family=Outfit:wght@100..900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -51,16 +53,24 @@
     @apply pb-12 sm:pb-24;
   }
 
-  .font-montserrat {
+  /* .font-montserrat {
     font-family: 'Montserrat', sans-serif;
+  } */
+
+  .font-outfit {
+    font-family: "Outfit", sans-serif;
+  }
+
+  .font-megrim {
+    font-family: "Megrim", system-ui;
+  }
+
+  .font-mina {
+    font-family: "Mina", sans-serif;
   }
 
   .text-slate-gray {
     color: slategray;
-  }
-
-  .info-text {
-    @apply font-montserrat text-slate-gray text-lg leading-7;
   }
 }
 
@@ -225,3 +235,29 @@ body::-webkit-scrollbar-thumb:hover {
 body::-webkit-scrollbar-thumb:vertical:not(:hover):not(:active) {
   border-radius: 0;
 }
+
+.music-background-default {
+  height: 100vh;
+  width: 720px;
+  background-image: url('/fondo.png');
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease-in-out;
+}
+
+/* .music-background-default:hover {
+  background-image: url('/fondo1.png');
+} */
+
+.programming-background-default {
+  height: 100vh;
+  width: 720px;
+  background-image: url('/fondo.png');
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease-in-out;
+}
+
+/* .programming-background-default:hover {
+  background-image: url('/fondo2.png');
+} */

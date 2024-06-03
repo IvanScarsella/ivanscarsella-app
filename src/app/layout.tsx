@@ -33,7 +33,10 @@ export default function RootLayout({
       </head>
       <body className={`${inter.className} relative`}>
         <ThemeProvider>
-          <div className='content-container  min-h-screen z-1 relative bg-gradient-to-tl from-red-700 to-slate-200 dark:bg-gradient-to-br dark:from-bordo dark:to-black'>
+          <div className='bg-[#222222]'>
+            {children}
+          </div>
+          {/* <div className='content-container  min-h-screen z-1 relative bg-gradient-to-tl from-red-700 to-slate-200 dark:bg-gradient-to-br dark:from-bordo dark:to-black'>
             {children}
           </div>
           <div
@@ -42,7 +45,7 @@ export default function RootLayout({
               backgroundImage:
                 'url("https://64.media.tumblr.com/c065bd8029c005960f465d1478e0b9f0/tumblr_nhep76DdW41rjledmo1_500.gifv")',
             }}
-          ></div>
+          ></div> */}
         </ThemeProvider>
       </body>
     </html>
