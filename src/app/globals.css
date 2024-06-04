@@ -238,7 +238,7 @@ body::-webkit-scrollbar-thumb:vertical:not(:hover):not(:active) {
 
 .music-background-default {
   height: 100vh;
-  width: 720px;
+  /* width: 720px; */
   background-image: url('/fondo.png');
   background-size: cover;
   background-position: center;
@@ -251,7 +251,7 @@ body::-webkit-scrollbar-thumb:vertical:not(:hover):not(:active) {
 
 .programming-background-default {
   height: 100vh;
-  width: 720px;
+  /* width: 720px; */
   background-image: url('/fondo.png');
   background-size: cover;
   background-position: center;
