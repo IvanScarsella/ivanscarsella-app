@@ -175,6 +175,20 @@
       "image": "/projectImages/hotelManagement.png"
     },
     {
+      "name": "Toco y me Voy",
+      "description": "Aplicación para celulares desarrollada en Angular para poder unirte a partidos de fútbol en tu área. Cuenta con perfil de usuario, opción de agregar amigos, chat individual, etc...",
+      "link": "https://tocoymevoy.netlify.app/login",
+      "techStack": [
+        { "src": "angular_icon.png", "name": "Angular" },
+        { "src": "typescript_icon.png", "name": "TypeScript" },
+        { "src": "css.png", "name": "CSS" },
+        { "src": "tailwind_icon.webp", "name": "Tailwind" },
+        { "src": "html_icon.png", "name": "HTML" },
+        { "src": "figma_icon.png", "name": "Figma" }
+      ],
+      "image": "/projectImages/tocoYMeVoy.png"
+    },
+    {
       "name": "Zingoni Propiedades",
       "description": "Sitio web desarrollado para la inmobiliaria Zingoni Propiedades. Contiene filtros de búsqueda, carrusel con las propiedades destacadas, páginas de contacto con la posibilidad de enviar mails y geoubicación con Google Maps.",
       "link": "https://zingonipropiedades.com.ar",
