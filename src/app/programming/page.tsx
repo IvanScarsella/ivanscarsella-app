@@ -27,6 +27,7 @@ import figma_icon from '../../../public/figma_icon.png'
 import angular_icon from '../../../public/angular_icon.png'
 import googleMaps_icon from '../../../public/googleMaps_icon.png'
 import { useRouter } from 'next/navigation'
+import ProjectCard from '../components/ProjectCard'
 
 const page = () => {
 
@@ -34,7 +35,8 @@ const page = () => {
 
   const techImages = [
     { icon: html_icon, alt: 'HTML' },
-    { icon: react_icon, alt: 'CSS' },
+    { icon: css_icon, alt: 'CSS' },
+    { icon: react_icon, alt: 'React' },
     { icon: bootstrap_icon, alt: 'Bootstrap' },
     { icon: javascript_icon, alt: 'JavaScript' },
     { icon: typescript_icon, alt: 'TypeScript' },
@@ -51,14 +53,17 @@ const page = () => {
     { icon: googleMaps_icon, alt: 'Google Maps' },
   ]
 
-  const [programmingProjects, setProgrammingProjects] = useState([])
+  const [programmingProjects, setProgrammingProjects] = useState<any>([])
+  const [displayedProjects, setDisplayedProjects] = useState([])
   const [techStack, setTechStack] = useState<any[]>([])
+  const [selectedTech, setSelectedTech] = useState('')
 
   console.log(techStack)
   useEffect(() => {
     const fetchData = async () => {
       const projectsData = await axios.get('/api/getProjects')
       setProgrammingProjects(projectsData.data)
+      setDisplayedProjects(projectsData.data)
     }
     fetchData()
   }, [])
@@ -93,23 +98,69 @@ const page = () => {
     }
   }, [programmingProjects])
 
+  useEffect(() => {
+    if (selectedTech) {
+      let filteredProjects: any = []
+      for (let i = 0; i < programmingProjects.length; i++) {
+        for (let j = 0; j < programmingProjects[i].techStack.length; j++) {
+          if (programmingProjects[i].techStack[j].name === selectedTech) {
+            filteredProjects.push(programmingProjects[i])
+          }
+        }
+      }
+      setDisplayedProjects(filteredProjects)
+    }
+    else setDisplayedProjects(programmingProjects)
+  }, [selectedTech])
+
+  const handleSelectedTech = (tech: string) => {
+    if (selectedTech === tech) setSelectedTech('')
+    else setSelectedTech(tech)
+  }
+
+  function invertDecimalToHex(decimal: number) {
+    if (decimal < 0 || decimal > 255) {
+      throw new Error("El número debe estar entre 0 y 255");
+    }
+
+    // Invertir el valor
+    // let decimal = decimal * 10;
+
+    // Convertir el valor invertido a hexadecimal
+    let hex = ((decimal + 10) * 3).toString(16).toUpperCase();
+
+    // Asegurarse de que tenga dos dígitos
+    if (hex.length === 1) {
+      hex = '0' + hex;
+    }
+    console.log('bg-[#' + hex + hex + hex + ']')
+    return `#${hex}${hex}${hex}`;
+  }
+
   return (
     <>
-      <section className='flex flex-col items-center w-screen h-screen'>
+      <section className='flex flex-col items-center w-full h-full'>
         <div className='h-22 w-full flex flex-row justify-around items-center mt-9'>
-          <ArrowLeftIcon className="w-16 h-16 fixed left-20 cursor-pointer" onClick={() => router.push('/')} />
+          <ArrowLeftIcon className="w-16 h-16 fixed left-20 cursor-pointer hover:scale-125" onClick={() => router.push('/')} />
           <h1 className='font-mina text-[54px]'>Programación</h1>
-          <div className='fixed w-[357px] h-[527px] -top-[0px] -right-[0px]'>
+          <div className='absolute w-[357px] h-[527px] -top-[0px] -right-[0px]'>
             <Image src={image} alt='Foto' className='container' />
           </div>
         </div>
         <p className='mr-[100px] w-[842px] text-[32px] font-mina text-center mt-[79px]'>¡Hola! Soy Ivan Scarsella, un apasionado programador Full Stack graduado de Soy Henry. Mi enfoque se centra en crear soluciones innovadoras y eficientes para desafíos tecnológicos. Estoy comprometido con el aprendizaje continuo y la excelencia en el desarrollo de software. ¡Gracias por visitar mi portfolio!</p>
         <div className='flex flex-row justify-between mt-[105px] gap-10 max-h-14 items-baseline'>
           {techStack.map(tech => (
-            <div className='h-12 w-12 flex flex-col gap-2  justify-between' title={tech.name} key={tech.name}>
-              <Image src={tech.image.src} alt={tech.name} className='container' width={40} height={40} />
+            <div className={`h-full min-h-16 w-12 p-1 flex flex-col gap-2  justify-between rounded-xl cursor-pointer hover:scale-110 ${selectedTech === tech.name ? ' shadow-md shadow-slate-500 scale-[1.20]' : null}`} style={{ backgroundColor: invertDecimalToHex(tech.count) }} title={tech.name} key={tech.name} onClick={() => handleSelectedTech(tech.name)}>
+              <div>
+                <Image src={tech.image.src} alt={tech.name} className='container' width={40} height={40} />
+              </div>
               <p className='text-center font-mina'>{tech.count}</p>
             </div>
+          ))}
+        </div>
+        <div className='flex flex-row flex-wrap gap-5 mx-[100px] mt-20'>
+          {displayedProjects.map(project => (
+            <ProjectCard project={project} />
           ))}
         </div>
       </section>
