@@ -163,6 +163,7 @@ const page = () => {
             <ProjectCard project={project} />
           ))}
         </div>
+        <Footer />
       </section>
     </>
   )
