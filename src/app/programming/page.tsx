@@ -133,7 +133,7 @@ const page = () => {
     if (hex.length === 1) {
       hex = '0' + hex;
     }
-    console.log('bg-[#' + hex + hex + hex + ']')
+
     return `#${hex}${hex}${hex}`;
   }
 
@@ -150,9 +150,9 @@ const page = () => {
         <p className='mr-[100px] w-[842px] text-[32px] font-mina text-center mt-[79px]'>¡Hola! Soy Ivan Scarsella, un apasionado programador Full Stack graduado de Soy Henry. Mi enfoque se centra en crear soluciones innovadoras y eficientes para desafíos tecnológicos. Estoy comprometido con el aprendizaje continuo y la excelencia en el desarrollo de software. ¡Gracias por visitar mi portfolio!</p>
         <div className='flex flex-row justify-between mt-[105px] gap-10 max-h-14 items-baseline'>
           {techStack.map(tech => (
-            <div className={`h-full min-h-16 w-12 p-1 flex flex-col gap-2  justify-between rounded-xl cursor-pointer hover:scale-110 ${selectedTech === tech.name ? ' shadow-md shadow-slate-500 scale-[1.20]' : null}`} style={{ backgroundColor: invertDecimalToHex(tech.count) }} title={tech.name} key={tech.name} onClick={() => handleSelectedTech(tech.name)}>
-              <div>
-                <Image src={tech.image.src} alt={tech.name} className='container' width={40} height={40} />
+            <div className={`h-full min-h-16 w-12 p-1 flex flex-col gap-2  justify-between rounded-xl cursor-pointer hover:scale-110 ${selectedTech === tech.name ? ' shadow-md shadow-slate-500 scale-[1.20]' : null}`} style={{ backgroundColor: invertDecimalToHex(tech.count), scale: (tech.count + 100) / 100 }} title={tech.name} key={tech.name} onClick={() => handleSelectedTech(tech.name)}>
+              <div className='h-10'>
+                <Image src={tech.image.src} alt={tech.name} className='container h-10' width={40} height={40} />
               </div>
               <p className='text-center font-mina'>{tech.count}</p>
             </div>
