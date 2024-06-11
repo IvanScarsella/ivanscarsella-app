@@ -139,7 +139,7 @@ const page = () => {
 
   return (
     <>
-      <section className='flex flex-col items-center w-full h-full'>
+      <section className='flex flex-col items-center w-full h-full bg-[#222222]'>
         <div className='h-22 w-full flex flex-row justify-around items-center mt-9'>
           <ArrowLeftIcon className="w-16 h-16 fixed left-20 cursor-pointer hover:scale-125" onClick={() => router.push('/')} />
           <h1 className='font-mina text-[54px]'>Programación</h1>

@@ -33,7 +33,7 @@ export default function RootLayout({
       </head>
       <body className={`${inter.className} relative`}>
         <ThemeProvider>
-          <div className='bg-[#222222]'>
+          <div className=''>
             {children}
           </div>
           {/* <div className='content-container  min-h-screen z-1 relative bg-gradient-to-tl from-red-700 to-slate-200 dark:bg-gradient-to-br dark:from-bordo dark:to-black'>

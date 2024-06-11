@@ -15,7 +15,7 @@ export default function Home() {
   const router = useRouter()
   const [isHovered, setIsHovered] = useState(false);
   return (
-    <main className='relative flex h-full w-full flex-row items-center'>
+    <main className='relative flex h-full w-full flex-row items-center bg-[#222222]'>
       <h1 className="absolute top-[70px] left-0 right-0 flex items-center justify-center font-outfit text-[64px] max-sm:text-3xl">Iván Scarsella</h1>
       <div className={`music-background-default w-1/2 flex flex-col items-center ${isHovered ? 'hover:bg-music' : ''}`}>
         <div

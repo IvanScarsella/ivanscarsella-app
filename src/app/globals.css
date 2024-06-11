@@ -261,3 +261,8 @@ body::-webkit-scrollbar-thumb:vertical:not(:hover):not(:active) {
 /* .programming-background-default:hover {
   background-image: url('/fondo2.png');
 } */
+
+ul .dot {
+  scale: 1.4;
+  filter: invert();
+}
