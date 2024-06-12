@@ -100,13 +100,13 @@ const Page = () => {
 
   return (
     <>
-      <section className='px-[100px] bg-[#030303]'>
+      <section className='px-[100px] bg-[#030303] mb-8'>
         <div className='h-22 w-full flex flex-row justify-around items-center'>
           <ArrowLeftIcon className="w-16 h-16 fixed left-24 cursor-pointer hover:scale-125" onClick={() => router.push('/')} />
           <h1 className='font-megrim text-8xl text-[#D9D7D7] mt-[21px]'>MUSICA</h1>
           <PlayIcon className="w-16 h-16 fixed right-24 cursor-pointer hover:scale-125" onClick={() => router.push('/')} />
         </div>
-        <div className='flex flex-row w-full gap-5'>
+        <div className='flex flex-row w-full gap-5 mt-7'>
           <Carousel
 
             {...settings}
@@ -154,7 +154,7 @@ const Page = () => {
           >
             {/* Primer segmento: Vertical desde el div del logo */}
             <div
-              className="absolute border-l-2 border-[#BD1717]"
+              className="absolute border-l-[1px] border-[#BD1717]"
               style={{
                 top: `${linePosition.startY}px`,
                 left: `${linePosition.startX}px`,
@@ -163,7 +163,7 @@ const Page = () => {
             ></div>
             {/* Segundo segmento: Horizontal */}
             <div
-              className="absolute border-t-2 border-[#BD1717]"
+              className="absolute border-t-[1px] border-[#BD1717]"
               style={{
                 top: `${linePosition.middleY1}px`,
                 left: `${Math.min(linePosition.middleX1, linePosition.middleX2)}px`,
@@ -172,7 +172,7 @@ const Page = () => {
             ></div>
             {/* Tercer segmento: Vertical */}
             <div
-              className="absolute border-l-2 border-[#BD1717]"
+              className="absolute border-l-[1px] border-[#BD1717]"
               style={{
                 top: `${linePosition.middleY1}px`,
                 left: `${linePosition.middleX2}px`,
