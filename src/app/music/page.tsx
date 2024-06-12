@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Nav from '../components/Nav'
 import MusicSection from './musicSection/page'
 import Footer from '../sections/Footer'
@@ -50,14 +50,41 @@ const Page = () => {
 
   const [coverVideos, setCoverVideos] = useState([])
   const [originalVideos, setOriginalVideos] = useState([])
+  const [selectedBand, setSelectedBand] = useState('')
+  const [selectedBandVideos, setSelectedBandVideos] = useState([])
   const [loading, setLoading] = useState(true)
+  const [linePosition, setLinePosition] = useState({ startX: 0, startY: 0, middleX1: 0, middleY1: 0, middleX2: 0, middleY2: 0, endX: 0, endY: 0 });
+  const logoRefs = useRef<any>([]);
+  const videosRef = useRef<any>(null);
+  console.log(linePosition)
+  useEffect(() => {
+    if (selectedBand) {
+      const selectedLogo = logoRefs.current.find((ref: any) => ref.dataset.name === selectedBand);
+      if (selectedLogo && videosRef.current) {
+        const logoRect = selectedLogo.getBoundingClientRect();
+        const videosRect = videosRef.current.getBoundingClientRect();
+
+        const startX = logoRect.left + window.scrollX + logoRect.width / 2;
+        const startY = logoRect.bottom + window.scrollY;
+        const middleY1 = startY + (videosRect.top + window.scrollY - startY) / 2;
+        const middleX2 = videosRect.left + window.scrollX + videosRect.width / 2;
+        const endY = videosRect.top + window.scrollY;
+
+        setLinePosition({ startX, startY, middleX1: startX, middleY1, middleX2, middleY2: middleY1, endX: middleX2, endY });
+      }
+    }
+  }, [selectedBand]);
+
+  useEffect(() => {
+    setSelectedBandVideos(originalVideos.filter((video: any) => video.data.artist === selectedBand))
+  }, [selectedBand])
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const coverData = await axios.get('/api/getCoverVideos')
         const originalData = await axios.get('/api/getOriginalVideos')
-
+        setSelectedBand('F20')
         setCoverVideos(coverData.data)
         setOriginalVideos(originalData.data)
       } catch (error) {
@@ -73,7 +100,7 @@ const Page = () => {
 
   return (
     <>
-      <section className='mx-[100px] bg-[#030303]'>
+      <section className='px-[100px] bg-[#030303]'>
         <div className='h-22 w-full flex flex-row justify-around items-center'>
           <ArrowLeftIcon className="w-16 h-16 fixed left-24 cursor-pointer hover:scale-125" onClick={() => router.push('/')} />
           <h1 className='font-megrim text-8xl text-[#D9D7D7] mt-[21px]'>MUSICA</h1>
@@ -95,11 +122,17 @@ const Page = () => {
             Soy Licenciado y Profesor de Música con orientación en Música Popular, graduado de la Universidad Nacional de La Plata. Como baterista y pianista he participado en varios proyectos en donde he aprendido a desenvolverme en varios géneros musicales.
           </p>
         </div>
-        <div className='flex flex-row mt-[93px] gap-[63px]'>
-          {bands.map((band) => (
-            <div className='w-96 h-96 border border-[#BD1717] p-4'>
+        <div className="flex flex-row mt-[93px] gap-[63px]">
+          {bands.map((band, index) => (
+            <div
+              key={band.name}
+              className={`w-96 h-96 border border-[#BD1717] p-4 hover:scale-110 cursor-pointer ${selectedBand === band.name ? 'scale-110' : null}`}
+              onClick={() => setSelectedBand(band.name)}
+              ref={el => (logoRefs.current[index] = el)}
+              data-name={band.name}
+            >
               <Image
-                className='container'
+                className="container"
                 src={band.src}
                 alt={band.name}
                 width={1000}
@@ -107,6 +140,56 @@ const Page = () => {
               />
             </div>
           ))}
+        </div>
+        {selectedBand && (
+          <div
+            className="absolute"
+            style={{
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              pointerEvents: 'none',
+            }}
+          >
+            {/* Primer segmento: Vertical desde el div del logo */}
+            <div
+              className="absolute border-l-2 border-[#BD1717]"
+              style={{
+                top: `${linePosition.startY}px`,
+                left: `${linePosition.startX}px`,
+                height: `${linePosition.middleY1 - linePosition.startY}px`,
+              }}
+            ></div>
+            {/* Segundo segmento: Horizontal */}
+            <div
+              className="absolute border-t-2 border-[#BD1717]"
+              style={{
+                top: `${linePosition.middleY1}px`,
+                left: `${Math.min(linePosition.middleX1, linePosition.middleX2)}px`,
+                width: `${Math.abs(linePosition.middleX1 - linePosition.middleX2)}px`,
+              }}
+            ></div>
+            {/* Tercer segmento: Vertical */}
+            <div
+              className="absolute border-l-2 border-[#BD1717]"
+              style={{
+                top: `${linePosition.middleY1}px`,
+                left: `${linePosition.middleX2}px`,
+                height: `${linePosition.endY - linePosition.middleY1}px`,
+              }}
+            ></div>
+          </div>
+        )}
+        <div
+          ref={videosRef}
+          className="flex flex-col gap-[142px] mt-[133px] border border-[#BD1717] py-40 px-20"
+        >
+          {selectedBandVideos.length && selectedBand !== 'Turkos' ? (
+            selectedBandVideos.map((video, index) => <MusicCard key={index} video={video} />)
+          ) : selectedBand === 'Turkos' ? (
+            <p className="text-8xl font-bold font-mina text-white text-center">Proximamente...</p>
+          ) : null}
         </div>
         <h2 className='font-megrim text-8xl text-[#D9D7D7] text-center mt-[133px]'>COVERS</h2>
         <div className='flex flex-col gap-[142px] mt-[133px]'>
