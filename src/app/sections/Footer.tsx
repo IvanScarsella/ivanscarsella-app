@@ -55,7 +55,6 @@ const socialMedia = [
 
 const Footer = () => {
   const router = useRouter()
-  console.log(usePathname())
   return (
     <footer className={`w-full h-[206px] flex flex-col items-center ${usePathname() === '/music' ? 'bg-[#0F1317]' : null}`}>
       <div className='flex flex-row gap-[60px] mt-[26px]'>

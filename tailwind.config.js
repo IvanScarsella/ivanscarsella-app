@@ -13,6 +13,9 @@ module.exports = {
       colors: {
         bordo: '#540000',
       },
+      boxShadow: {
+        'inner-custom': 'inset 0 1px 15px 3px #1ED760',
+      },
     },
   },
   plugins: [],

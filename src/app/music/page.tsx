@@ -16,16 +16,19 @@ import imagen1 from '../../../public/imagen_carrusel_1.jpg'
 import imagen2 from '../../../public/imagen_carrusel_2.jpg'
 import imagen3 from '../../../public/imagen_carrusel_3.jpeg'
 import imagen4 from '../../../public/imagen_carrusel_4.jpg'
+import imagen5 from '../../../public/imagen_carrusel_5.jpeg'
 import logof20 from '../../../public/f20_logo.png'
 import logoturkos from '../../../public/turkos_logo.png'
 import logom28 from '../../../public/m28_logo.png'
+import spotifyLogo from '../../../public/spotify_logo.png'
 import MusicCard from '../components/MusicCard'
 
 const settings = {
   infiniteLoop: true,
   autoPlay: true,
   showThumbs: false,
-  interval: 3000,
+  interval: 2000,
+  transitionTime: 1000,
   showArrows: false,
   showStatus: false,
   // showIndicators: false,
@@ -36,10 +39,11 @@ const Page = () => {
   const router = useRouter()
 
   const images = [
+    { src: imagen5, alt: 'imagen' },
+    { src: imagen4, alt: 'imagen' },
     { src: imagen1, alt: 'imagen' },
     { src: imagen2, alt: 'imagen' },
     { src: imagen3, alt: 'imagen' },
-    { src: imagen4, alt: 'imagen' },
   ]
 
   const bands = [
@@ -56,7 +60,8 @@ const Page = () => {
   const [linePosition, setLinePosition] = useState({ startX: 0, startY: 0, middleX1: 0, middleY1: 0, middleX2: 0, middleY2: 0, endX: 0, endY: 0 });
   const logoRefs = useRef<any>([]);
   const videosRef = useRef<any>(null);
-  console.log(linePosition)
+  const [showSpotify, setShowSpotify] = useState(false)
+
   useEffect(() => {
     if (selectedBand) {
       const selectedLogo = logoRefs.current.find((ref: any) => ref.dataset.name === selectedBand);
@@ -104,7 +109,20 @@ const Page = () => {
         <div className='h-22 w-full flex flex-row justify-around items-center'>
           <ArrowLeftIcon className="w-16 h-16 fixed left-24 cursor-pointer hover:scale-125" onClick={() => router.push('/')} />
           <h1 className='font-megrim text-8xl text-[#D9D7D7] mt-[21px]'>MUSICA</h1>
-          <PlayIcon className="w-16 h-16 fixed right-24 cursor-pointer hover:scale-125" onClick={() => router.push('/')} />
+          <div className={`w-[100px] h-[100px] z-10 p-5 hover:p-4 fixed right-24 cursor-pointer shadow-inner-custom rounded-full  hover:grayscale-0 ${showSpotify ? 'grayscale' : 'grayscale-0'}`} onClick={() => setShowSpotify((value) => !value)}>
+            <Image src={spotifyLogo} alt='spotify' height={100} width={100} className='container' />
+          </div>
+          <div className='fixed -right-10 top-20 z-10 mr-10 p-4  max-xl:-z-10   max-xl:mr-auto max-xl:p-14 xl:mt-10' hidden={showSpotify} onMouseLeave={() => setShowSpotify((value) => !value)}>
+            <iframe
+              className='ease-500 transition-all hover:scale-110 hover:shadow-2xl'
+              src='https://open.spotify.com/embed/playlist/1mzf2NhbQTX9o7j9TvieS4?utm_source=generator'
+              width='100%'
+              height='352'
+              frameBorder='0'
+              allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'
+              loading='lazy'
+            ></iframe>
+          </div>
         </div>
         <div className='flex flex-row w-full gap-5 mt-7'>
           <Carousel
@@ -192,7 +210,7 @@ const Page = () => {
           ) : null}
         </div>
         <h2 className='font-megrim text-8xl text-[#D9D7D7] text-center mt-[133px]'>COVERS</h2>
-        <div className='flex flex-col gap-[142px] mt-[133px]'>
+        <div className='flex flex-col gap-[142px] mt-[133px] items-center'>
           {loading ? (
             <div className='loader'></div>
           ) : (
@@ -203,25 +221,6 @@ const Page = () => {
         </div>
       </section>
       <Footer />
-      {/* <Nav />
-      <div className='relative z-10 mt-16 text-center'>
-        <h1 className='font-palanquin z-10 p-4 text-4xl font-semibold text-black dark:text-white max-lg:text-3xl max-sm:text-2xl'>
-          Podés explorar la música en la que he estado trabajando últimamente
-        </h1>
-      </div>
-      <section className='relative z-10 flex flex-col xl:flex-row'>
-        <div className='w-full xl:w-3/4'>
-          <MusicSection sectionName='Covers' musicVideos={coverVideos} />
-          <MusicSection
-            sectionName='Música Original'
-            musicVideos={originalVideos}
-          />
-        </div>
-        <div className='w-full xl:w-1/4'>
-          <Spotify />
-        </div>
-      </section>
-      <Footer /> */}
     </>
   )
 }
