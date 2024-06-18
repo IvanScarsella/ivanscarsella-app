@@ -130,26 +130,26 @@ const page = () => {
 
   return (
     <>
-      <section className='flex flex-col items-center w-full h-full bg-[#222222]'>
+      <section className='flex flex-col items-center w-full h-full bg-[#222222] max-lg:px-2'>
         <div className='h-22 w-full flex flex-row justify-around items-center mt-9'>
-          <ArrowLeftIcon className="w-16 h-16 fixed left-20 cursor-pointer hover:scale-125" onClick={() => router.push('/')} />
-          <h1 className='font-mina text-[54px]'>Programación</h1>
-          <div className='absolute w-[357px] h-[527px] -top-[0px] -right-[0px]'>
+          <ArrowLeftIcon className="w-16 max-sm:w-10 max-lg:w-14 h-16 max-sm:h-10 max-lg:h-14 absolute left-20 max-sm:left-8 max-lg:left-14 cursor-pointer hover:scale-125" onClick={() => router.push('/')} />
+          <h1 className='font-mina text-[54px] max-sm:text-3xl max-lg:text-5xl'>Programación</h1>
+          <div className='absolute w-[357px] h-[527px] -top-[0px] -right-[0px] max-xl:scale-[.85] max-lg:scale-75 max-md:scale-[.6] max-sm:scale-[.4] max-xl:-right-[28px] max-xl:-top-[40px] max-lg:-right-[45px] max-lg:-top-[64px] max-md:-right-[70px] max-md:-top-[104px] max-sm:-right-[106px] max-sm:-top-[156px] max-lg:hidden'>
             <Image src={image} alt='Foto' className='container' />
           </div>
         </div>
-        <p className='mr-[100px] w-[842px] text-[32px] font-mina text-center mt-[79px]'>¡Hola! Soy Ivan Scarsella, desarrollador web Full Stack. Me encanta resolver problemas y brindar soluciones eficientes. Te invito a ver mis proyectos en donde utilizo varias tecnologías, siendo las mas destacadas Next js, Tailwind, Typescript, etc. ¡Gracias por visitar mi portfolio!</p>
-        <div className='flex flex-row justify-between mt-[105px] gap-10 max-h-14 items-baseline'>
+        <p className='mr-[200px] max-2xl:mr-[300px] max-xl:mr-60 max-lg:mr-0  max-lg:px-4 w-[842px] max-xl:w-[580px] max-lg:w-full text-[32px] max-sm:text-xl max-lg:text-2xl max-xl:text-3xl font-mina  mt-[79px] text-justify'>¡Hola! Soy Ivan Scarsella, desarrollador web Full Stack. Me encanta resolver problemas y brindar soluciones eficientes. Te invito a ver mis proyectos en donde utilizo varias tecnologías, siendo las mas destacadas Next js, Tailwind, Typescript, etc. ¡Gracias por visitar mi portfolio!</p>
+        <div className='flex flex-row flex-wrap mt-[105px] gap-10 max-xl:gap-6  items-baseline'>
           {techStack.map(tech => (
-            <div className={`h-full min-h-16 w-12 p-1 flex flex-col gap-2  justify-between rounded-xl cursor-pointer hover:scale-110 ${selectedTech === tech.name ? ' shadow-md shadow-slate-500 scale-[1.20]' : null}`} style={{ backgroundColor: invertDecimalToHex(tech.count), scale: (tech.count + 100) / 100 }} title={tech.name} key={tech.name} onClick={() => handleSelectedTech(tech.name)}>
-              <div className='h-10'>
-                <Image src={tech.image.src} alt={tech.name} className='container h-10' width={40} height={40} />
+            <div className={`h-full min-h-16 max-lg:min-h-0 w-12 p-1 flex flex-col gap-2  justify-between rounded-xl cursor-pointer hover:scale-110 ${selectedTech === tech.name ? ' shadow-md shadow-slate-500 scale-[1.20]' : null}`} style={{ backgroundColor: invertDecimalToHex(tech.count), scale: (tech.count + 100) / 100 }} title={tech.name} key={tech.name} onClick={() => handleSelectedTech(tech.name)}>
+              <div className='h-10 max-lg:h-8'>
+                <Image src={tech.image.src} alt={tech.name} className='container h-10 max-lg:h-8' width={40} height={40} />
               </div>
               <p className='text-center font-mina'>{tech.count}</p>
             </div>
           ))}
         </div>
-        <div className='flex flex-row flex-wrap gap-5 mx-[100px] mt-20'>
+        <div className='flex flex-row flex-wrap justify-around gap-5 mx-[100px] mt-20'>
           {displayedProjects.map(project => (
             <ProjectCard project={project} />
           ))}

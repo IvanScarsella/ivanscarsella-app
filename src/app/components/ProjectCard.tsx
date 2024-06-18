@@ -19,12 +19,12 @@ const ProjectCard = ({ project }: any) => {
       {loading ? (
         <div className='loader'></div>
       ) : (
-        <Link target='_blank' href={project.link} title={project.description}>
-          <div className='w-[606px] h-[455px]  border border-[#D9D7D7] rounded-xl'>
-            <div className='h-[290px] w-[604px] max-h-[290px]'>
+        <Link target='_blank' href={project.link} title={project.description} className='w-[606px] max-2xl:w-[500px] max-xl:w-[395px] h-[455px]'>
+          <div className='w-[606px] max-2xl:w-[500px] max-xl:w-[395px] pb-4 border border-[#D9D7D7] rounded-xl'>
+            <div className='h-[290px] w-[604px] max-2xl:w-[498px] max-xl:w-[393px] max-h-[290px]'>
               <Image className='container rounded-t-xl h-[290px]' src={project.image} alt={project.name} width={1000} height={1000} />
             </div>
-            <p className='font-mina text-[32px] text-center mt-4'>{project.name}</p>
+            <p className='font-mina text-[32px] max-xl:text-2xl text-center mt-4'>{project.name}</p>
             <div className='flex flex-row flex-wrap justify-around gap-4 mx-auto px-2 mt-3'>
               {project.techStack.map((icon: any, index: number) => (
                 <Image
@@ -34,7 +34,7 @@ const ProjectCard = ({ project }: any) => {
                   width={60}
                   height={60}
                   title={icon.name}
-                  className='ease-500 transition-all hover:scale-125 hover:shadow-2xl'
+                  className='ease-500 transition-all hover:scale-125 hover:shadow-2xl max-lg:h-10 max-2xl:w-10'
                 />
               ))}
             </div>
