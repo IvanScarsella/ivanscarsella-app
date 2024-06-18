@@ -19,7 +19,7 @@ const ProjectCard = ({ project }: any) => {
       {loading ? (
         <div className='loader'></div>
       ) : (
-        <Link target='_blank' href={project.link} title={project.description} className='w-[606px] max-2xl:w-[500px] max-xl:w-[395px] h-[455px]'>
+        <Link target='_blank' href={project.link} title={project.description} className='w-[606px] max-2xl:w-[500px] max-xl:w-[395px] '>
           <div className='w-[606px] max-2xl:w-[500px] max-xl:w-[395px] pb-4 border border-[#D9D7D7] rounded-xl'>
             <div className='h-[290px] w-[604px] max-2xl:w-[498px] max-xl:w-[393px] max-h-[290px]'>
               <Image className='container rounded-t-xl h-[290px]' src={project.image} alt={project.name} width={1000} height={1000} />
