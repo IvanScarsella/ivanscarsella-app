@@ -42,8 +42,8 @@ const Page = () => {
     { src: imagen5, alt: 'imagen' },
     { src: imagen4, alt: 'imagen' },
     { src: imagen1, alt: 'imagen' },
-    { src: imagen2, alt: 'imagen' },
     { src: imagen3, alt: 'imagen' },
+    { src: imagen2, alt: 'imagen' },
   ]
 
   const bands = [
@@ -109,7 +109,7 @@ const Page = () => {
         <div className='h-22 w-full flex flex-row justify-around items-center'>
           <ArrowLeftIcon className="w-16 h-16 fixed left-24 cursor-pointer hover:scale-125" onClick={() => router.push('/')} />
           <h1 className='font-megrim text-8xl text-[#D9D7D7] mt-[21px]'>MUSICA</h1>
-          <div className={`w-[100px] h-[100px] z-10 p-5 hover:p-4 fixed right-24 cursor-pointer shadow-inner-custom rounded-full  hover:grayscale-0 ${showSpotify ? 'grayscale' : 'grayscale-0'}`} onClick={() => setShowSpotify((value) => !value)}>
+          <div className={`w-[100px] h-[100px] z-10 p-5 hover:p-4 fixed right-24 cursor-pointer shadow-inner-custom rounded-full  hover:grayscale-0 ${showSpotify ? 'grayscale' : 'grayscale-0'}`} onClick={() => setShowSpotify((value) => !value)} title='Mostrar/ocultar Lista de Spotify'>
             <Image src={spotifyLogo} alt='spotify' height={100} width={100} className='container' />
           </div>
           <div className='fixed -right-10 top-20 z-10 mr-10 p-4  max-xl:-z-10   max-xl:mr-auto max-xl:p-14 xl:mt-10' hidden={showSpotify} onMouseLeave={() => setShowSpotify((value) => !value)}>
@@ -132,12 +132,12 @@ const Page = () => {
           >
             {images.map((image, index) => (
               <div className='w-[610px] h-[331px]'>
-                <Image src={image.src} alt={image.alt} width={1000} height={1000} className='container w-[610px] h-[331px]' />
+                <Image src={image.src} alt={image.alt} width={1500} height={1000} className='container w-[610px] h-[331px]' />
               </div>
             ))}
           </Carousel>
-          <p className='w-1/2 text-[32px] font-mina tracking-tight'>
-            Soy Licenciado y Profesor de Música con orientación en Música Popular, graduado de la Universidad Nacional de La Plata. Como baterista y pianista he participado en varios proyectos en donde he aprendido a desenvolverme en varios géneros musicales.
+          <p className='w-1/2 text-[29px] text-justify font-mina tracking-tight'>
+            Soy Licenciado y Profesor de Música con orientación en Música Popular, graduado de la Universidad Nacional de La Plata. Como baterista y pianista he participado en varios proyectos en donde he aprendido a desenvolverme en varios géneros musicales como el Rock, Metal, Pop, Música Latinoamericana, etc.
           </p>
         </div>
         <div className="flex flex-row mt-[93px] gap-[63px]">
@@ -148,6 +148,7 @@ const Page = () => {
               onClick={() => setSelectedBand(band.name)}
               ref={el => (logoRefs.current[index] = el)}
               data-name={band.name}
+              title={band.name}
             >
               <Image
                 className="container"

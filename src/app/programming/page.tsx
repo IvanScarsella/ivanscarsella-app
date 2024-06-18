@@ -58,7 +58,6 @@ const page = () => {
   const [techStack, setTechStack] = useState<any[]>([])
   const [selectedTech, setSelectedTech] = useState('')
 
-  console.log(techStack)
   useEffect(() => {
     const fetchData = async () => {
       const projectsData = await axios.get('/api/getProjects')
@@ -73,9 +72,7 @@ const page = () => {
       let techNames: any[] = []
       programmingProjects.forEach((project: any) => {
         project.techStack.forEach((tech: any) => {
-          // if (!allTech.includes(tech.name)) {
           techNames.push(tech.name)
-          // }
         })
       })
 
@@ -85,7 +82,6 @@ const page = () => {
       }, {});
 
       const techObjectsArray = Object.keys(techCount).map(tech => {
-        // Encontrar la imagen correspondiente a la tecnología
         const techImage = techImages.find(image => image.alt === tech);
         return {
           name: tech,
@@ -123,13 +119,8 @@ const page = () => {
       throw new Error("El número debe estar entre 0 y 255");
     }
 
-    // Invertir el valor
-    // let decimal = decimal * 10;
-
-    // Convertir el valor invertido a hexadecimal
     let hex = ((decimal + 10) * 3).toString(16).toUpperCase();
 
-    // Asegurarse de que tenga dos dígitos
     if (hex.length === 1) {
       hex = '0' + hex;
     }
@@ -147,7 +138,7 @@ const page = () => {
             <Image src={image} alt='Foto' className='container' />
           </div>
         </div>
-        <p className='mr-[100px] w-[842px] text-[32px] font-mina text-center mt-[79px]'>¡Hola! Soy Ivan Scarsella, un apasionado programador Full Stack graduado de Soy Henry. Mi enfoque se centra en crear soluciones innovadoras y eficientes para desafíos tecnológicos. Estoy comprometido con el aprendizaje continuo y la excelencia en el desarrollo de software. ¡Gracias por visitar mi portfolio!</p>
+        <p className='mr-[100px] w-[842px] text-[32px] font-mina text-center mt-[79px]'>¡Hola! Soy Ivan Scarsella, desarrollador web Full Stack. Me encanta resolver problemas y brindar soluciones eficientes. Te invito a ver mis proyectos en donde utilizo varias tecnologías, siendo las mas destacadas Next js, Tailwind, Typescript, etc. ¡Gracias por visitar mi portfolio!</p>
         <div className='flex flex-row justify-between mt-[105px] gap-10 max-h-14 items-baseline'>
           {techStack.map(tech => (
             <div className={`h-full min-h-16 w-12 p-1 flex flex-col gap-2  justify-between rounded-xl cursor-pointer hover:scale-110 ${selectedTech === tech.name ? ' shadow-md shadow-slate-500 scale-[1.20]' : null}`} style={{ backgroundColor: invertDecimalToHex(tech.count), scale: (tech.count + 100) / 100 }} title={tech.name} key={tech.name} onClick={() => handleSelectedTech(tech.name)}>
