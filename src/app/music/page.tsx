@@ -109,9 +109,9 @@ const Page = () => {
     <>
       <section className='px-[100px] max-xl:px-4 bg-[#030303] mb-8'>
         <div className='h-22 w-full flex flex-row justify-around items-center pt-5'>
-          <ArrowLeftIcon className="w-16 max-sm:w-10 max-lg:w-14 h-16 max-sm:h-10 max-lg:h-14 absolute left-20 max-sm:left-8 max-lg:left-14 cursor-pointer hover:scale-125" onClick={() => router.push('/')} />
+          <ArrowLeftIcon className="w-16 max-sm:w-10 max-lg:w-14 h-16 max-sm:h-10 max-lg:h-14 absolute left-20 max-sm:left-8 max-lg:left-14 cursor-pointer hover:scale-125 ease-500 transition-all" onClick={() => router.push('/')} />
           <h1 className='font-megrim text-8xl max-xl:text-6xl max-sm:text-4xl text-[#D9D7D7] '>MUSICA</h1>
-          <div className={`w-[100px] h-[100px] max-xl:scale-[.7] max-sm:scale-[.6] z-10 p-5 hover:p-4 fixed right-24 max-sm:right-4 max-lg:right-14 cursor-pointer  rounded-full  hover:grayscale-0 ${showSpotify ? 'grayscale shadow-inner-custom' : 'grayscale-0 shadow-inner-custom-2'}`} onClick={() => setShowSpotify((value) => !value)} title='Mostrar/ocultar Lista de Spotify'>
+          <div className={`w-[100px] h-[100px] max-xl:scale-[.7] max-sm:scale-[.6] z-10 p-5 hover:p-4 fixed right-24 max-sm:right-4 max-lg:right-14 cursor-pointer  rounded-full  hover:grayscale-0 ease-500 transition-all ${showSpotify ? 'grayscale shadow-inner-custom' : 'grayscale-0 shadow-inner-custom-2'}`} onClick={() => setShowSpotify((value) => !value)} title='Mostrar/ocultar Lista de Spotify'>
             {showSpotify ?
               <Image src={spotifyLogo} alt='spotify' height={100} width={100} className='container' />
               : <Image src={cross} alt='spotify' height={100} width={100} className='container' />
@@ -149,7 +149,7 @@ const Page = () => {
           {bands.map((band, index) => (
             <div
               key={band.name}
-              className={`w-96 h-auto max-md:w-full max-md:h-72  border border-[#BD1717] p-4 max-md:p-2 hover:scale-110 cursor-pointer ${selectedBand === band.name ? 'scale-[1.2] hover:scale-[1.2] shadow-lg shadow-[#BD1717aa]' : null}`}
+              className={`w-96 h-auto max-md:w-full max-md:h-72  border border-[#BD1717] p-4 max-md:p-2 hover:scale-110 cursor-pointer ${selectedBand === band.name ? 'scale-[1.2] hover:scale-[1.2] shadow-lg shadow-[#BD1717aa]' : null} ease-500 transition-all`}
               onClick={() => setSelectedBand(band.name)}
               ref={el => (logoRefs.current[index] = el)}
               data-name={band.name}
