@@ -144,7 +144,7 @@ const Page = () => {
           {bands.map((band, index) => (
             <div
               key={band.name}
-              className={`w-96 h-auto max-md:w-full max-md:h-72  border border-[#BD1717] p-4 max-md:p-2 hover:scale-110 cursor-pointer ${selectedBand === band.name ? 'scale-110 max-md:scale-125' : null}`}
+              className={`w-96 h-auto max-md:w-full max-md:h-72  border border-[#BD1717] p-4 max-md:p-2 hover:scale-110 cursor-pointer ${selectedBand === band.name ? 'scale-110 max-md:scale-125 shadow-lg shadow-[#BD1717aa]' : null}`}
               onClick={() => setSelectedBand(band.name)}
               ref={el => (logoRefs.current[index] = el)}
               data-name={band.name}
