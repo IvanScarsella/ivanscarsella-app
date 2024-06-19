@@ -219,7 +219,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-  background: linear-gradient(black, #991b1baa, #991b1b, #991b1baa, black);
+  background: linear-gradient(black, #2F3337aa, #2F3337, #2F3337aa, black);
   border-radius: 6px;
   transition: background-color 1.3s;
 }
@@ -229,7 +229,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb:hover {
-  background-color: #991b1bC4;
+  background-color: #2F3337C4;
 }
 
 body::-webkit-scrollbar-thumb:vertical:not(:hover):not(:active) {
