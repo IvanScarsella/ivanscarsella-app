@@ -26,6 +26,7 @@ import sanity_icon from '../../../public/sanity_icon.png'
 import figma_icon from '../../../public/figma_icon.png'
 import angular_icon from '../../../public/angular_icon.png'
 import googleMaps_icon from '../../../public/googleMaps_icon.png'
+import cross from '../../../public/cross.png'
 import { useRouter } from 'next/navigation'
 import ProjectCard from '../components/ProjectCard'
 
@@ -139,13 +140,16 @@ const page = () => {
           </div>
         </div>
         <p className='mr-[200px] max-2xl:mr-[300px] max-xl:mr-60 max-lg:mr-0  max-lg:px-4 w-[842px] max-xl:w-[580px] max-lg:w-full text-[32px] max-sm:text-xl max-lg:text-2xl max-xl:text-3xl font-mina  mt-[79px] text-justify'>¡Hola! Soy Ivan Scarsella, desarrollador web Full Stack. Me encanta resolver problemas y brindar soluciones eficientes. Te invito a ver mis proyectos en donde utilizo varias tecnologías, siendo las mas destacadas Next js, Tailwind, Typescript, etc. ¡Gracias por visitar mi portfolio!</p>
-        <div className='flex flex-row flex-wrap mt-[105px] gap-10 max-xl:gap-6  items-baseline'>
+        <div className='flex flex-row flex-wrap mt-[105px] mx-auto gap-10 max-xl:gap-6  items-baseline'>
           {techStack.map(tech => (
-            <div className={`h-full min-h-16 max-lg:min-h-0 w-12 p-1 flex flex-col gap-2  justify-between rounded-xl cursor-pointer hover:scale-110 ${selectedTech === tech.name ? ' shadow-md shadow-slate-500 scale-[1.20]' : null} ease-500 transition-all`} style={{ backgroundColor: invertDecimalToHex(tech.count), scale: (tech.count + 100) / 100 }} title={tech.name} key={tech.name} onClick={() => handleSelectedTech(tech.name)}>
+            <div className={`h-full min-h-16 max-lg:min-h-0 w-12 p-1 flex flex-col gap-1 mx-auto justify-between rounded-xl cursor-pointer hover:scale-110 ${selectedTech === tech.name ? ' shadow-sm shadow-[#D9D7D7] scale-[1.20]' : null} ease-500 transition-all`} style={{ backgroundColor: invertDecimalToHex(tech.count), scale: (tech.count + 100) / 100 }} title={tech.name} key={tech.name} onClick={() => handleSelectedTech(tech.name)}>
               <div className='h-10 max-lg:h-8'>
                 <Image src={tech.image.src} alt={tech.name} className='container h-10 max-lg:h-8' width={40} height={40} />
               </div>
-              <p className='text-center font-mina'>{tech.count}</p>
+              <p className='text-center font-mina mt-1'>{tech.count}</p>
+              <div className='h-5 w-5 mx-auto' hidden={selectedTech !== tech.name}>
+                <Image src={cross} alt='cross' className='container -mb-2' />
+              </div>
             </div>
           ))}
         </div>
