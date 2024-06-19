@@ -31,11 +31,11 @@ const MusicCard = ({ video }: any) => {
               allowFullScreen
             ></iframe>
           </div>
-          <div className='flex flex-col max-md:flex-row max-md:flex-wrap justify-around items-center text-center my-5 mx-auto w-2/5 max-md:w-full max-md:px-8'>
-            <p className='font-mina text-[40px] max-lg:text-4xl max-md:text-3xl max-sm:text-2xl max-md:w-1/2 max-md:mt-2'>Artista:</p>
-            <p className='font-mina text-[50px] max-lg:text-[45px] max-md:text-4xl max-sm:text-3xl font-bold max-md:w-1/2 max-md:mt-2'>{video.data.artist}</p>
-            <p className='font-mina text-[40px] max-lg:text-4xl max-md:text-3xl max-sm:text-2xl max-md:w-1/2 max-md:mt-2'>Canción:</p>
-            <p className='font-mina text-[40px] max-lg:text-4xl max-md:text-3xl max-sm:text-2xl font-bold max-md:w-1/2 max-md:mt-2'>"{video.data.song}"</p>
+          <div className='flex flex-col max-md:flex-row max-md:gap-2 max-md:flex-wrap justify-around items-center text-center my-5 mx-auto w-2/5 max-md:w-full max-md:px-8'>
+            <p className='font-mina text-[40px] max-lg:text-4xl max-md:text-3xl max-sm:text-2xl max-md:w-5/12 max-md:mt-2 max-md:text-right'>Artista:</p>
+            <p className='font-mina text-[50px] max-lg:text-[45px] max-md:text-4xl max-sm:text-3xl font-bold max-md:w-5/12 max-md:mt-2 max-md:text-left'>{video.data.artist}</p>
+            <p className='font-mina text-[40px] max-lg:text-4xl max-md:text-3xl max-sm:text-2xl max-md:w-5/12 max-md:mt-2 max-md:text-right'>Canción:</p>
+            <p className='font-mina text-[40px] max-lg:text-4xl max-md:text-3xl max-sm:text-2xl font-bold max-md:w-5/12 max-md:mt-2 max-md:text-left'>"{video.data.song}"</p>
             <a target='_blank'
               href='https://www.youtube.com/channel/UC7kHGbpDf0goDHH7cQfF92A?sub_confirmation=1'>
               <button
