@@ -21,7 +21,9 @@ import logof20 from '../../../public/f20_logo.png'
 import logoturkos from '../../../public/turkos_logo.png'
 import logom28 from '../../../public/m28_logo.png'
 import spotifyLogo from '../../../public/spotify_logo.png'
+import cross from '../../../public/cross.png'
 import MusicCard from '../components/MusicCard'
+import { MdClose } from 'react-icons/md'
 
 const settings = {
   infiniteLoop: true,
@@ -109,10 +111,13 @@ const Page = () => {
         <div className='h-22 w-full flex flex-row justify-around items-center pt-5'>
           <ArrowLeftIcon className="w-16 max-sm:w-10 max-lg:w-14 h-16 max-sm:h-10 max-lg:h-14 absolute left-20 max-sm:left-8 max-lg:left-14 cursor-pointer hover:scale-125" onClick={() => router.push('/')} />
           <h1 className='font-megrim text-8xl max-xl:text-6xl max-sm:text-4xl text-[#D9D7D7] '>MUSICA</h1>
-          <div className={`w-[100px] h-[100px] max-xl:scale-[.7] max-sm:scale-[.6] z-10 p-5 hover:p-4 fixed right-24 max-sm:right-4 max-lg:right-14 cursor-pointer shadow-inner-custom rounded-full  hover:grayscale-0 ${showSpotify ? 'grayscale' : 'grayscale-0'}`} onClick={() => setShowSpotify((value) => !value)} title='Mostrar/ocultar Lista de Spotify'>
-            <Image src={spotifyLogo} alt='spotify' height={100} width={100} className='container' />
+          <div className={`w-[100px] h-[100px] max-xl:scale-[.7] max-sm:scale-[.6] z-10 p-5 hover:p-4 fixed right-24 max-sm:right-4 max-lg:right-14 cursor-pointer  rounded-full  hover:grayscale-0 ${showSpotify ? 'grayscale shadow-inner-custom' : 'grayscale-0 shadow-inner-custom-2'}`} onClick={() => setShowSpotify((value) => !value)} title='Mostrar/ocultar Lista de Spotify'>
+            {showSpotify ?
+              <Image src={spotifyLogo} alt='spotify' height={100} width={100} className='container' />
+              : <Image src={cross} alt='spotify' height={100} width={100} className='container' />
+            }
           </div>
-          <div className='fixed -right-10 top-20 z-10 mr-10 p-4   max-xl:mr-auto max-xl:p-14 xl:mt-10' hidden={showSpotify} onMouseLeave={() => setShowSpotify((value) => !value)}>
+          <div className='fixed -right-10 top-20 z-10 mr-10 p-4   max-xl:mr-auto max-xl:p-14 xl:mt-10' hidden={showSpotify === true} onMouseLeave={() => setShowSpotify((value) => !value)}>
             <iframe
               className='ease-500 transition-all hover:scale-110 hover:shadow-2xl z-20'
               src='https://open.spotify.com/embed/playlist/1mzf2NhbQTX9o7j9TvieS4?utm_source=generator'

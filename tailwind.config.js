@@ -15,6 +15,7 @@ module.exports = {
       },
       boxShadow: {
         'inner-custom': 'inset 0 1px 15px 3px #1ED760',
+        'inner-custom-2': 'inset 0 1px 15px 3px #BD1717',
       },
     },
   },
