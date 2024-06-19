@@ -181,7 +181,7 @@
       "techStack": [
         { "src": "angular_icon.png", "name": "Angular" },
         { "src": "typescript_icon.png", "name": "TypeScript" },
-        { "src": "css.png", "name": "CSS" },
+        { "src": "css_icon.png", "name": "CSS" },
         { "src": "tailwind_icon.png", "name": "Tailwind" },
         { "src": "html_icon.png", "name": "HTML" },
         { "src": "figma_icon.png", "name": "Figma" }
@@ -197,7 +197,7 @@
         { "src": "next_icon.png", "name": "Next Js" },
         { "src": "tailwind_icon.png", "name": "Tailwind" },
         { "src": "html_icon.png", "name": "HTML" },
-        { "src": "css.png", "name": "CSS" },
+        { "src": "css_icon.png", "name": "CSS" },
         { "src": "figma_icon.png", "name": "Figma" }
       ],
       "image": "/projectImages/portfolio.png"
@@ -210,7 +210,7 @@
         { "src": "javascript_icon.png", "name": "JavaScript" },
         { "src": "next_icon.png", "name": "Next Js" },
         { "src": "html_icon.png", "name": "HTML" },
-        { "src": "css.png", "name": "CSS" },
+        { "src": "css_icon.png", "name": "CSS" },
         { "src": "prisma_icon.png", "name": "Prisma" },
         { "src": "postgresql_icon.png", "name": "PostgreSQL" },
         { "src": "googleMaps_icon.png", "name": "Google Maps" }
@@ -224,7 +224,7 @@
       "techStack": [
         { "src": "javascript_icon.png", "name": "JavaScript" },
         { "src": "next_icon.png", "name": "Next Js" },
-        { "src": "css.png", "name": "CSS" },
+        { "src": "css_icon.png", "name": "CSS" },
         { "src": "html_icon.png", "name": "HTML" },
         { "src": "prisma_icon.png", "name": "Prisma" },
         { "src": "postgresql_icon.png", "name": "PostgreSQL" }
@@ -238,7 +238,7 @@
       "techStack": [
         { "src": "javascript_icon.png", "name": "JavaScript" },
         { "src": "next_icon.png", "name": "Next Js" },
-        { "src": "css.png", "name": "CSS" },
+        { "src": "css_icon.png", "name": "CSS" },
         { "src": "tailwind_icon.png", "name": "Tailwind" }
       ],
       "image": "/projectImages/nikeLandingPage.png"
@@ -249,7 +249,7 @@
       "link": "https://lista-tareas-angular-17-ivanscarsella.netlify.app/",
       "techStack": [
         { "src": "angular_icon.png", "name": "Angular" },
-        { "src": "css.png", "name": "CSS" },
+        { "src": "css_icon.png", "name": "CSS" },
         { "src": "typescript_icon.png", "name": "TypeScript" }
       ],
       "image": "/projectImages/listaDeTareasAngular.png"
@@ -273,7 +273,7 @@
         { "src": "typescript_icon.png", "name": "TypeScript" },
         { "src": "next_icon.png", "name": "Next Js" },
         { "src": "bootstrap_icon.png", "name": "Bootstrap" },
-        { "src": "css.png", "name": "CSS" }
+        { "src": "css_icon.png", "name": "CSS" }
       ],
       "image": "/projectImages/conversor.png"
     }
