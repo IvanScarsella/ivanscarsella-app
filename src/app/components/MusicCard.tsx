@@ -19,7 +19,7 @@ const MusicCard = ({ video }: any) => {
       {loading ? (
         <div className='loader'></div>
       ) : (
-        <div className='flex flex-row max-md:flex-col h-full w-full border-2 border-[#D3CFCF] rounded-2xl max-md:p-4'>
+        <div className='flex flex-row max-md:flex-col h-full w-full border-2 border-[#D3CFCF] rounded-2xl max-md:p-4 mx-10'>
           <div className='ease-500  rounded-3xl transition-all  w-3/5 max-md:w-full'>
             <iframe
               // width={624}

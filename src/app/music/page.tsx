@@ -55,6 +55,7 @@ const Page = () => {
   ]
 
   const [coverVideos, setCoverVideos] = useState([])
+  const [renderCoverVideos, setRenderCoverVideos] = useState([])
   const [originalVideos, setOriginalVideos] = useState([])
   const [selectedBand, setSelectedBand] = useState('')
   const [selectedBandVideos, setSelectedBandVideos] = useState([])
@@ -63,6 +64,11 @@ const Page = () => {
   const logoRefs = useRef<any>([]);
   const videosRef = useRef<any>(null);
   const [showSpotify, setShowSpotify] = useState(false)
+  console.log(coverVideos)
+  const showMoreButton: boolean = coverVideos
+    ? renderCoverVideos.length < coverVideos.length
+    : false
+  const showLessButton: boolean = renderCoverVideos.length > 5
 
   useEffect(() => {
     if (selectedBand) {
@@ -93,6 +99,7 @@ const Page = () => {
         const originalData = await axios.get('/api/getOriginalVideos')
         setSelectedBand('F20')
         setCoverVideos(coverData.data)
+        setRenderCoverVideos(coverData.data.slice(0, 5))
         setOriginalVideos(originalData.data)
       } catch (error) {
         console.error('Error fetching data:', error)
@@ -107,7 +114,7 @@ const Page = () => {
 
   return (
     <>
-      <section className='px-[100px] max-xl:px-4 bg-[#030303] mb-8'>
+      <section className='px-[100px] max-xl:px-4 bg-[#030303] '>
         <div className='h-22 w-full flex flex-row justify-around items-center pt-5'>
           <ArrowLeftIcon className="w-16 max-sm:w-10 max-lg:w-14 h-16 max-sm:h-10 max-lg:h-14 absolute left-20 max-sm:left-8 max-lg:left-14 cursor-pointer hover:scale-125 ease-500 transition-all" onClick={() => router.push('/')} />
           <h1 className='font-megrim text-8xl max-xl:text-6xl max-sm:text-4xl text-[#D9D7D7] '>MUSICA</h1>
@@ -171,8 +178,6 @@ const Page = () => {
               key={band.name}
               className={`w-60 h-auto max-md:w-full max-md:h-72   p-8 max-md:p-4  hover:scale-110 cursor-pointer ${selectedBand === band.name ? '' : null} ease-500 transition-all mx-auto px-2`}
               onClick={() => setSelectedBand(band.name)}
-              ref={el => (logoRefs.current[index] = el)}
-              data-name={band.name}
               title={band.name}
             >
               <Image
@@ -233,13 +238,31 @@ const Page = () => {
           ) : null}
         </div>
         <h2 className='font-megrim text-8xl text-[#D9D7D7] text-center mt-[133px]'>COVERS</h2>
-        <div className='flex flex-col gap-[142px] mt-[133px] items-center'>
+        <div className='flex flex-col gap-28 mt-[133px] items-center'>
           {loading ? (
             <div className='loader'></div>
           ) : (
-            coverVideos.map((video: any, index: any) => (
+            renderCoverVideos.map((video: any, index: any) => (
               <MusicCard key={index} video={video} />
             ))
+          )}
+        </div>
+        <div className='line-clamp-1 flex flex-1 flex-col items-center w-full my-8'>
+          {showMoreButton && (
+            <button
+              onClick={() => setRenderCoverVideos(coverVideos)}
+              className='ease-500 rounded-full bg-[#F1EDED] p-3 font-bold text-xl text-[#242323] transition-all hover:scale-110 hover:shadow-2xl  hover:rounded-full max-h-[52px]'
+            >
+              Ver más...
+            </button>
+          )}
+          {showLessButton && (
+            <button
+              onClick={() => setRenderCoverVideos(coverVideos.slice(0, 5))}
+              className='ease-500 rounded-full bg-[#F1EDED] p-3 font-bold text-xl text-[#242323] transition-all hover:scale-110 hover:shadow-2xl  hover:rounded-full max-h-[52px]'
+            >
+              Ver menos...
+            </button>
           )}
         </div>
       </section>
