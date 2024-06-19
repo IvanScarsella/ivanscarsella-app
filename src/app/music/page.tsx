@@ -145,11 +145,11 @@ const Page = () => {
             Soy Licenciado y Profesor de Música con orientación en Música Popular, graduado de la Universidad Nacional de La Plata. Como baterista y pianista he participado en varios proyectos en donde he aprendido a desenvolverme en varios géneros musicales como el Rock, Metal, Pop, Música Latinoamericana, etc.
           </p>
         </div>
-        <div className="flex flex-row max-md:flex-col justify-around items-center mt-[93px] max-md:mt-12 gap-[63px] max-xl:gap-14 max-lg:gap-10 p-10 max-md:px-40 max-sm:px-12">
+        <div className="flex flex-row max-md:hidden justify-around items-center mt-[93px] max-md:mt-12 gap-[63px] max-xl:gap-14 max-lg:gap-10 p-10 max-md:px-40 max-sm:px-12">
           {bands.map((band, index) => (
             <div
               key={band.name}
-              className={`w-96 h-auto max-md:w-full max-md:h-72  border border-[#BD1717] p-4 max-md:p-2 hover:scale-110 cursor-pointer ${selectedBand === band.name ? 'scale-[1.2] hover:scale-[1.2] shadow-lg shadow-[#BD1717aa]' : null} ease-500 transition-all`}
+              className={`w-96 h-auto max-md:w-full max-md:h-72  border border-[#BD1717] p-4 max-md:p-2 hover:scale-110 cursor-pointer ${selectedBand === band.name ? 'scale-[1.1] shadow-lg shadow-[#BD1717aa]' : null} ease-500 transition-all`}
               onClick={() => setSelectedBand(band.name)}
               ref={el => (logoRefs.current[index] = el)}
               data-name={band.name}
@@ -165,6 +165,26 @@ const Page = () => {
             </div>
           ))}
         </div>
+        <Carousel className='md:hidden mt-10 max-sm:px-20 max-[580px]:px-5'>
+          {bands.map((band, index) => (
+            <div
+              key={band.name}
+              className={`w-60 h-auto max-md:w-full max-md:h-72   p-8 max-md:p-4  hover:scale-110 cursor-pointer ${selectedBand === band.name ? '' : null} ease-500 transition-all mx-auto px-2`}
+              onClick={() => setSelectedBand(band.name)}
+              ref={el => (logoRefs.current[index] = el)}
+              data-name={band.name}
+              title={band.name}
+            >
+              <Image
+                className={`container max-md:max-w-full max-md:h-72 max-md:max-h-full my-auto ${selectedBand === band.name ? 'scale-[1.1] bg-[#BD1717] bg-opacity-40' : null} p-4`}
+                src={band.src}
+                alt={band.name}
+                width={1000}
+                height={1000}
+              />
+            </div>
+          ))}
+        </Carousel>
         {selectedBand && (
           <div
             className="absolute max-md:hidden"
@@ -204,7 +224,7 @@ const Page = () => {
         )}
         <div
           ref={videosRef}
-          className="flex flex-col items-center gap-[142px] mt-[133px] border border-[#BD1717] py-40 max-md:py-20 max-sm:py-8 px-20 max-md:px-10 max-sm:px-4"
+          className="flex flex-col items-center gap-[142px] mt-[133px] max-md:mt-10 border border-[#BD1717] py-40 max-md:py-20 max-sm:py-8 px-20 max-md:px-10 max-sm:px-4"
         >
           {selectedBandVideos.length && selectedBand !== 'Turkos' ? (
             selectedBandVideos.map((video, index) => <MusicCard key={index} video={video} />)

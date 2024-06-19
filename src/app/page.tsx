@@ -14,10 +14,11 @@ import { useRouter } from 'next/navigation'
 export default function Home() {
   const router = useRouter()
   const [isHovered, setIsHovered] = useState(false);
+  const [route, setRoute] = useState('')
 
-  const handleClick = () => {
+  const handleClick = (route: string) => {
     setTimeout(() => {
-      router.push('/programming');
+      router.push(route);
     }, 1000);
   };
 
@@ -29,7 +30,7 @@ export default function Home() {
           className='h-[330px] w-[330px] max-md:h-[220px] max-md:w-[220px] max-sm:h-[170px] max-sm:w-[170px] rounded-full border border-[#BFBBBB] flex flex-row items-center my-auto cursor-pointer'
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
-          onClick={handleClick}
+          onClick={() => handleClick('/music')}
         >
           <p className='font-megrim text-[64px] max-md:text-[42px] max-sm:text-4xl mx-auto'>Música</p>
         </div>
@@ -39,29 +40,11 @@ export default function Home() {
           className='h-[330px] w-[330px] max-md:h-[220px] max-md:w-[220px] max-sm:h-[170px] max-sm:w-[170px] rounded-full border border-[#BFBBBB] flex flex-row items-center my-auto cursor-pointer'
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
-          onClick={() => router.push('/programming')}
+          onClick={() => handleClick('/programming')}
         >
           <p className='font-mina text-[45px] max-md:text-[30px] max-sm:text-2xl mx-auto'>Programación</p>
         </div>
       </div>
     </main>
-    // <main className='relative z-10'>
-    //   <Nav />
-    //   <section className='flex justify-center'>
-    //     <Title />
-    //   </section>
-    //   <section className='xl:padding-1 wide:padding-r padding-b'>
-    //     <Principal />
-    //   </section>
-    //   <section>
-    //     <Carousel />
-    //   </section>
-    //   <section className=''>
-    //     <Certificates />
-    //   </section>
-    //   <section>
-    //     <Footer />
-    //   </section>
-    // </main>
   )
 }
