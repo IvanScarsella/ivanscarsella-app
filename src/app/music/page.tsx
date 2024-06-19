@@ -140,11 +140,11 @@ const Page = () => {
             Soy Licenciado y Profesor de Música con orientación en Música Popular, graduado de la Universidad Nacional de La Plata. Como baterista y pianista he participado en varios proyectos en donde he aprendido a desenvolverme en varios géneros musicales como el Rock, Metal, Pop, Música Latinoamericana, etc.
           </p>
         </div>
-        <div className="flex flex-row max-md:flex-col justify-around items-center mt-[93px] max-md:mt-12 gap-[63px] max-lg:gap-10 p-10 max-md:px-40 max-sm:px-12">
+        <div className="flex flex-row max-md:flex-col justify-around items-center mt-[93px] max-md:mt-12 gap-[63px] max-xl:gap-14 max-lg:gap-10 p-10 max-md:px-40 max-sm:px-12">
           {bands.map((band, index) => (
             <div
               key={band.name}
-              className={`w-96 h-auto max-md:w-full max-md:h-72  border border-[#BD1717] p-4 max-md:p-2 hover:scale-110 cursor-pointer ${selectedBand === band.name ? 'scale-110 max-md:scale-125 shadow-lg shadow-[#BD1717aa]' : null}`}
+              className={`w-96 h-auto max-md:w-full max-md:h-72  border border-[#BD1717] p-4 max-md:p-2 hover:scale-110 cursor-pointer ${selectedBand === band.name ? 'scale-[1.2] hover:scale-[1.2] shadow-lg shadow-[#BD1717aa]' : null}`}
               onClick={() => setSelectedBand(band.name)}
               ref={el => (logoRefs.current[index] = el)}
               data-name={band.name}
