@@ -154,9 +154,9 @@
       "description": "Aplicación realizada para mostrar el catálogo de productos de una vinoteca. Posee filtros combinados, búsqueda, administración de base de datos, ubicación y carrusel de productos destacados.",
       "link": "https://vinotecamadrecepa.com.ar/",
       "techStack": [
-        { "src": "next_icon.svg", "name": "Next Js" },
+        { "src": "next_icon.png", "name": "Next Js" },
         { "src": "typescript_icon.png", "name": "TypeScript" },
-        { "src": "tailwind_icon.webp", "name": "Tailwind" },
+        { "src": "tailwind_icon.png", "name": "Tailwind" },
         { "src": "figma_icon.png", "name": "Figma" }
       ],
       "image": "/projectImages/vinotecaMadrecepa.png"
@@ -166,13 +166,41 @@
       "description": "Es una aplicación para reservar hoteles. Incluye Sanity.IO para la base de datos, comentarios y puntuación del hotel de parte del usuario, reserva de habitaciones, pagos online con Stripe, Dark Mode, Búsqueda y filtros por nombre y tipo de habitación, autenticación con Auth.js, estilos con Tailwind CSS.",
       "link": "https://hotel-management-phi.vercel.app/",
       "techStack": [
-        { "src": "next_icon.svg", "name": "Next Js" },
+        { "src": "next_icon.png", "name": "Next Js" },
         { "src": "typescript_icon.png", "name": "TypeScript" },
-        { "src": "tailwind_icon.webp", "name": "Tailwind" },
+        { "src": "tailwind_icon.png", "name": "Tailwind" },
         { "src": "sanity_icon.png", "name": "Sanity.io" },
         { "src": "stripe_icon.png", "name": "Stripe" }
       ],
       "image": "/projectImages/hotelManagement.png"
+    },
+    {
+      "name": "Toco y me Voy",
+      "description": "Aplicación para celulares desarrollada en Angular para poder unirte a partidos de fútbol en tu área. Cuenta con perfil de usuario, opción de agregar amigos, chat individual, etc...",
+      "link": "https://tocoymevoy.netlify.app/login",
+      "techStack": [
+        { "src": "angular_icon.png", "name": "Angular" },
+        { "src": "typescript_icon.png", "name": "TypeScript" },
+        { "src": "css.png", "name": "CSS" },
+        { "src": "tailwind_icon.png", "name": "Tailwind" },
+        { "src": "html_icon.png", "name": "HTML" },
+        { "src": "figma_icon.png", "name": "Figma" }
+      ],
+      "image": "/projectImages/tocoYMeVoy.png"
+    },
+    {
+      "name": "Portfolio - Iván Scarsella",
+      "description": "¡Es esta página!",
+      "link": "https://ivanscarsella.com.ar",
+      "techStack": [
+        { "src": "typescript_icon.png", "name": "TypeScript" },
+        { "src": "next_icon.png", "name": "Next Js" },
+        { "src": "tailwind_icon.png", "name": "Tailwind" },
+        { "src": "html_icon.png", "name": "HTML" },
+        { "src": "css.png", "name": "CSS" },
+        { "src": "figma_icon.png", "name": "Figma" }
+      ],
+      "image": "/projectImages/portfolio.png"
     },
     {
       "name": "Zingoni Propiedades",
@@ -180,7 +208,7 @@
       "link": "https://zingonipropiedades.com.ar",
       "techStack": [
         { "src": "javascript_icon.png", "name": "JavaScript" },
-        { "src": "next_icon.svg", "name": "Next Js" },
+        { "src": "next_icon.png", "name": "Next Js" },
         { "src": "html_icon.png", "name": "HTML" },
         { "src": "css.png", "name": "CSS" },
         { "src": "prisma_icon.png", "name": "Prisma" },
@@ -195,7 +223,7 @@
       "link": "https://tech-talent-hub-actual-git-develop-equipo3henry.vercel.app/",
       "techStack": [
         { "src": "javascript_icon.png", "name": "JavaScript" },
-        { "src": "next_icon.svg", "name": "Next Js" },
+        { "src": "next_icon.png", "name": "Next Js" },
         { "src": "css.png", "name": "CSS" },
         { "src": "html_icon.png", "name": "HTML" },
         { "src": "prisma_icon.png", "name": "Prisma" },
@@ -209,9 +237,9 @@
       "link": "https://nike-tailwind-ivanscarsella.vercel.app/",
       "techStack": [
         { "src": "javascript_icon.png", "name": "JavaScript" },
-        { "src": "next_icon.svg", "name": "Next Js" },
+        { "src": "next_icon.png", "name": "Next Js" },
         { "src": "css.png", "name": "CSS" },
-        { "src": "tailwind_icon.webp", "name": "Tailwind" }
+        { "src": "tailwind_icon.png", "name": "Tailwind" }
       ],
       "image": "/projectImages/nikeLandingPage.png"
     },
@@ -232,8 +260,8 @@
       "link": "https://clarifion-upsell-cyan.vercel.app/",
       "techStack": [
         { "src": "javascript_icon.png", "name": "JavaScript" },
-        { "src": "next_icon.svg", "name": "Next Js" },
-        { "src": "tailwind_icon.webp", "name": "Tailwind" }
+        { "src": "next_icon.png", "name": "Next Js" },
+        { "src": "tailwind_icon.png", "name": "Tailwind" }
       ],
       "image": "/projectImages/clarifionUpsell.png"
     },
@@ -243,7 +271,7 @@
       "link": "https://conversor-de-numeros-romanos-l7ms-ivanscarsella.vercel.app/",
       "techStack": [
         { "src": "typescript_icon.png", "name": "TypeScript" },
-        { "src": "next_icon.svg", "name": "Next Js" },
+        { "src": "next_icon.png", "name": "Next Js" },
         { "src": "bootstrap_icon.png", "name": "Bootstrap" },
         { "src": "css.png", "name": "CSS" }
       ],

@@ -7,9 +7,14 @@ module.exports = {
       backgroundImage: {
         light: "url('/sol.png')",
         dark: "url('/luna.png')",
+        music: "url('/fondo1.png')",
+        programming: "url('/fondo2.png')",
       },
       colors: {
         bordo: '#540000',
+      },
+      boxShadow: {
+        'inner-custom': 'inset 0 1px 15px 3px #1ED760',
       },
     },
   },
