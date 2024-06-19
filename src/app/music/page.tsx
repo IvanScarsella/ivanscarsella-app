@@ -140,11 +140,11 @@ const Page = () => {
             Soy Licenciado y Profesor de Música con orientación en Música Popular, graduado de la Universidad Nacional de La Plata. Como baterista y pianista he participado en varios proyectos en donde he aprendido a desenvolverme en varios géneros musicales como el Rock, Metal, Pop, Música Latinoamericana, etc.
           </p>
         </div>
-        <div className="flex flex-row max-md:flex-col items-center mt-[93px] gap-[63px] max-md:px-40 max-sm:p-20 max-[500px]:px-12">
+        <div className="flex flex-row max-md:flex-col items-center mt-[93px] max-md:mt-12 gap-[63px] max-md:px-40 max-sm:px-12">
           {bands.map((band, index) => (
             <div
               key={band.name}
-              className={`w-96 h-96 max-md:w-full max-md:h-72  border border-[#BD1717] p-4 max-md:p-2 hover:scale-110 max-md:hover:scale-[1.15] cursor-pointer ${selectedBand === band.name ? 'scale-110 max-md:scale-125' : null}`}
+              className={`w-96 h-96 max-md:w-full max-md:h-72  border border-[#BD1717] p-4 max-md:p-2 hover:scale-110 cursor-pointer ${selectedBand === band.name ? 'scale-110 max-md:scale-125' : null}`}
               onClick={() => setSelectedBand(band.name)}
               ref={el => (logoRefs.current[index] = el)}
               data-name={band.name}
@@ -171,7 +171,6 @@ const Page = () => {
               pointerEvents: 'none',
             }}
           >
-            {/* Primer segmento: Vertical desde el div del logo */}
             <div
               className="absolute border-l-[1px] border-[#BD1717]"
               style={{
@@ -180,7 +179,6 @@ const Page = () => {
                 height: `${linePosition.middleY1 - linePosition.startY}px`,
               }}
             ></div>
-            {/* Segundo segmento: Horizontal */}
             <div
               className="absolute border-t-[1px] border-[#BD1717]"
               style={{
@@ -189,7 +187,6 @@ const Page = () => {
                 width: `${Math.abs(linePosition.middleX1 - linePosition.middleX2)}px`,
               }}
             ></div>
-            {/* Tercer segmento: Vertical */}
             <div
               className="absolute border-l-[1px] border-[#BD1717]"
               style={{
@@ -202,12 +199,12 @@ const Page = () => {
         )}
         <div
           ref={videosRef}
-          className="flex flex-col gap-[142px] mt-[133px] border border-[#BD1717] py-40 px-20"
+          className="flex flex-col items-center gap-[142px] mt-[133px] border border-[#BD1717] py-40 max-md:py-20 max-sm:py-8 px-20 max-md:px-10 max-sm:px-4"
         >
           {selectedBandVideos.length && selectedBand !== 'Turkos' ? (
             selectedBandVideos.map((video, index) => <MusicCard key={index} video={video} />)
           ) : selectedBand === 'Turkos' ? (
-            <p className="text-8xl font-bold font-mina text-white text-center">Proximamente...</p>
+            <p className="text-8xl max-lg:text-6xl max-sm:text-4xl font-bold font-mina text-white text-center">Proximamente...</p>
           ) : null}
         </div>
         <h2 className='font-megrim text-8xl text-[#D9D7D7] text-center mt-[133px]'>COVERS</h2>
