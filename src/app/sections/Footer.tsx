@@ -76,7 +76,7 @@ const Footer = () => {
         <p className={`font-mina font-medium text-[28px] cursor-pointer px-2 rounded-xl hover:bg-[#333333] ${usePathname() === '/programming' ? 'scale-110' : null}`} onClick={() => router.push('/programming')}>Programación</p>
       </div>
       <div className='text-white-400 mt-5 mb-1'>
-        <div className='font-montserrat z-10 mx-auto flex max-w-screen-xl flex-row max-[850px]:flex-col gap-2 items-center justify-between  text-sm'>
+        <div className='font-montserrat z-10 mx-auto flex max-w-screen-xl flex-row max-[850px]:flex-col gap-4 max-[850px]:gap-2 items-center justify-between  text-sm'>
           <Link target='_blank' href='https://www.linkedin.com/in/ivan-scarsella/'>
             <p className='font-extralight text-xl max-sm:text-base text-center cursor-pointer'>Desarrollo: Iván Scarsella</p>
           </Link>
