@@ -64,7 +64,7 @@ const Page = () => {
   const logoRefs = useRef<any>([]);
   const videosRef = useRef<any>(null);
   const [showSpotify, setShowSpotify] = useState(false)
-  console.log(coverVideos)
+
   const showMoreButton: boolean = coverVideos
     ? renderCoverVideos.length < coverVideos.length
     : false

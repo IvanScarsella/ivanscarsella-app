@@ -56,7 +56,7 @@ const socialMedia = [
 const Footer = () => {
   const router = useRouter()
   return (
-    <footer className={`w-full h-[206px] max-sm:h-60 flex flex-col items-center ${usePathname() === '/music' ? 'bg-[#0F1317]' : null}`}>
+    <footer className={`w-full h-[206px] max-[850px]:h-72 flex flex-col items-center ${usePathname() === '/music' ? 'bg-[#0F1317]' : null}`}>
       <div className='flex flex-row gap-[60px] max-sm:gap-8 mt-[26px]'>
         {socialMedia.map((icon, index) => (
           <Link key={index} target='_blank' href={icon.link}>
@@ -76,8 +76,14 @@ const Footer = () => {
         <p className={`font-mina font-medium text-[28px] cursor-pointer px-2 rounded-xl hover:bg-[#333333] ${usePathname() === '/programming' ? 'scale-110' : null}`} onClick={() => router.push('/programming')}>Programación</p>
       </div>
       <div className='text-white-400 mt-5 mb-1'>
-        <div className='font-montserrat z-10 mx-auto flex max-w-screen-xl flex-col items-center justify-between  text-sm'>
-          <p className='font-extralight text-xl max-sm:text-base text-center'>&copy; 2024 Iván Scarsella. Todos los derechos reservados.</p>
+        <div className='font-montserrat z-10 mx-auto flex max-w-screen-xl flex-row max-[850px]:flex-col gap-2 items-center justify-between  text-sm'>
+          <Link target='_blank' href='https://www.linkedin.com/in/ivan-scarsella/'>
+            <p className='font-extralight text-xl max-sm:text-base text-center cursor-pointer'>Desarrollo: Iván Scarsella</p>
+          </Link>
+          <Link target='_blank' href='https://www.linkedin.com/in/martin-villafa%C3%B1e-115439277/'>
+            <p className='font-extralight text-xl max-sm:text-base text-center cursor-pointer'>Diseño: Martín Villafañe</p>
+          </Link>
+          <p className='font-extralight text-xl max-sm:text-base text-center'>&copy; Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>
