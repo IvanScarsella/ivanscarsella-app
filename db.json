@@ -76,6 +76,15 @@
   "originalVideos": [
     {
       "data": {
+        "artist": "Turkos",
+        "song": "El Postre",
+        "genre": "Nu Metal",
+        "link": "https://www.youtube.com/watch?v=SYzn5IUWFro&ab_channel=TURKOS"
+      },
+      "src": "https://www.youtube.com/embed/SYzn5IUWFro?si=gcK6EKCWdO6SWDXm"
+    },
+    {
+      "data": {
         "artist": "F20",
         "song": "Daño Colateral",
         "genre": "Metal Progresivo",

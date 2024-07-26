@@ -231,10 +231,8 @@ const Page = () => {
           ref={videosRef}
           className="flex flex-col items-center gap-[142px] mt-[133px] max-md:mt-10 border border-[#BD1717] py-40 max-md:py-20 max-sm:py-8 px-20 max-md:px-10 max-sm:px-4"
         >
-          {selectedBandVideos.length && selectedBand !== 'Turkos' ? (
+          {selectedBandVideos.length ? (
             selectedBandVideos.map((video, index) => <MusicCard key={index} video={video} />)
-          ) : selectedBand === 'Turkos' ? (
-            <p className="text-8xl max-lg:text-6xl max-sm:text-4xl font-bold font-mina text-white text-center">Proximamente...</p>
           ) : null}
         </div>
         <h2 className='font-megrim text-8xl text-[#D9D7D7] text-center mt-[133px]'>COVERS</h2>
