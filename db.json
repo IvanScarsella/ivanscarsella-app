@@ -20,6 +20,15 @@
     },
     {
       "data": {
+        "artist": "Asspera",
+        "song": "Habilitá la Cerveza",
+        "genre": "Thrash Metal, Groove Metal",
+        "link": "https://youtu.be/wD0ztb6eogc?si=ifN4bsTMuSKcvetG"
+      },
+      "src": "https://www.youtube.com/embed/wD0ztb6eogc?si=ifN4bsTMuSKcvetG"
+    },
+    {
+      "data": {
         "artist": "La Mono",
         "song": "La Clase Santa",
         "genre": "Grunge, Rock Progresivo",
@@ -78,7 +87,7 @@
       "data": {
         "artist": "Turkos",
         "song": "El Postre",
-        "genre": "Nu Metal",
+        "genre": "Groove Metal",
         "link": "https://www.youtube.com/watch?v=SYzn5IUWFro&ab_channel=TURKOS"
       },
       "src": "https://www.youtube.com/embed/SYzn5IUWFro?si=gcK6EKCWdO6SWDXm"
