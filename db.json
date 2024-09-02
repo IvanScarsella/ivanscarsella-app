@@ -94,6 +94,15 @@
     },
     {
       "data": {
+        "artist": "Turkos",
+        "song": "TRKV",
+        "genre": "Groove Metal",
+        "link": "https://www.youtube.com/watch?v=iV38MdAHTjs"
+      },
+      "src": "https://www.youtube.com/embed/iV38MdAHTjs?si=JTLULemNnYahui2f"
+    },
+    {
+      "data": {
         "artist": "F20",
         "song": "Daño Colateral",
         "genre": "Metal Progresivo",
