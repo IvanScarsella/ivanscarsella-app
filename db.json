@@ -177,16 +177,17 @@
   ],
   "programmingProjects": [
     {
-      "name": "Vinoteca Madrecepa",
-      "description": "Aplicación realizada para mostrar el catálogo de productos de una vinoteca. Posee filtros combinados, búsqueda, administración de base de datos, ubicación y carrusel de productos destacados.",
-      "link": "https://vinotecamadrecepa.com.ar/",
+      "name": "Tienda de Bebidas Grilli",
+      "description": "Aplicación desarrollada con Next.js tipo E-commerce para una tienda de bebidas ubicada en la ciudad de La Plata. Posee filtros combinados, búsqueda, estilos con Tailwind CSS, gestión y mantenimiento de base de datos con Sanity.io.",
+      "link": "https://vinotecagrilli.com.ar/",
       "techStack": [
         { "src": "next_icon.png", "name": "Next Js" },
         { "src": "typescript_icon.png", "name": "TypeScript" },
         { "src": "tailwind_icon.png", "name": "Tailwind" },
+        { "src": "sanity_icon.png", "name": "Sanity.io" },
         { "src": "figma_icon.png", "name": "Figma" }
       ],
-      "image": "/projectImages/vinotecaMadrecepa.png"
+      "image": "/projectImages/vinotecaGrilli.png"
     },
     {
       "name": "Hotel Management",
@@ -228,6 +229,18 @@
         { "src": "figma_icon.png", "name": "Figma" }
       ],
       "image": "/projectImages/portfolio.png"
+    },
+    {
+      "name": "Vinoteca Madrecepa",
+      "description": "Aplicación realizada para mostrar el catálogo de productos de una vinoteca. Posee filtros combinados, búsqueda, administración de base de datos, ubicación y carrusel de productos destacados.",
+      "link": "https://vinotecamadrecepa.com.ar/",
+      "techStack": [
+        { "src": "next_icon.png", "name": "Next Js" },
+        { "src": "typescript_icon.png", "name": "TypeScript" },
+        { "src": "tailwind_icon.png", "name": "Tailwind" },
+        { "src": "figma_icon.png", "name": "Figma" }
+      ],
+      "image": "/projectImages/vinotecaMadrecepa.png"
     },
     {
       "name": "Zingoni Propiedades",
