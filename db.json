@@ -103,6 +103,15 @@
     },
     {
       "data": {
+        "artist": "Turkos",
+        "song": "Disruptor",
+        "genre": "Groove Metal",
+        "link": "https://www.youtube.com/watch?v=U7l6MUCIJyM&ab_channel=Iv%C3%A1nScarsella"
+      },
+      "src": "https://www.youtube.com/embed/U7l6MUCIJyM?si=DdSF3K1uyvEqhjNf"
+    },
+    {
+      "data": {
         "artist": "F20",
         "song": "Daño Colateral",
         "genre": "Metal Progresivo",
