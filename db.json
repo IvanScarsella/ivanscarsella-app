@@ -29,6 +29,15 @@
     },
     {
       "data": {
+        "artist": "System of a Down",
+        "song": "Sad Statue",
+        "genre": "Alternative Metal",
+        "link": "https://www.youtube.com/watch?v=KcQKZQowufE&ab_channel=Iv%C3%A1nScarsella"
+      },
+      "src": "https://www.youtube.com/embed/KcQKZQowufE?si=p2X_Z_oGJgYTsF3m"
+    },
+    {
+      "data": {
         "artist": "La Mono",
         "song": "La Clase Santa",
         "genre": "Grunge, Rock Progresivo",
@@ -56,6 +65,15 @@
     },
     {
       "data": {
+        "artist": "Arde La Sangre",
+        "song": "Aguantar",
+        "genre": "Nu Metal, Djent",
+        "link": "https://www.youtube.com/watch?v=oVxe_83KOCU&ab_channel=Iv%C3%A1nScarsella"
+      },
+      "src": "https://www.youtube.com/embed/oVxe_83KOCU?si=qJdEXCU5HLZ3qa4P"
+    },
+    {
+      "data": {
         "artist": "Barro",
         "song": "Fornai",
         "genre": "Nu Metal, Djent",
@@ -71,6 +89,15 @@
         "link": "https://www.youtube.com/watch?v=W18ibGDa4Ew&t=80s&ab_channel=Iv%C3%A1nScarsella"
       },
       "src": "https://www.youtube.com/embed/W18ibGDa4Ew?si=5J2qlB_uEA5VSMOW"
+    },
+    {
+      "data": {
+        "artist": "Britney Spears",
+        "song": "Toxic",
+        "genre": "Pop",
+        "link": "https://www.youtube.com/watch?v=8zSjIGvVUj0&ab_channel=Iv%C3%A1nScarsella"
+      },
+      "src": "https://www.youtube.com/embed/8zSjIGvVUj0?si=fHNZHE861CnvK7DB"
     },
     {
       "data": {
@@ -109,6 +136,24 @@
         "link": "https://www.youtube.com/watch?v=U7l6MUCIJyM&ab_channel=Iv%C3%A1nScarsella"
       },
       "src": "https://www.youtube.com/embed/U7l6MUCIJyM?si=DdSF3K1uyvEqhjNf"
+    },
+    {
+      "data": {
+        "artist": "Turkos",
+        "song": "En La Misma",
+        "genre": "Groove Metal",
+        "link": "https://www.youtube.com/watch?v=5L8Ywax9xuc&ab_channel=Iv%C3%A1nScarsella"
+      },
+      "src": "https://www.youtube.com/embed/5L8Ywax9xuc?si=hAiMQtp9657aq-Ar"
+    },
+    {
+      "data": {
+        "artist": "Turkos",
+        "song": "El Postre",
+        "genre": "Groove Metal",
+        "link": "https://www.youtube.com/watch?v=O7KrOSwSdaw&ab_channel=Iv%C3%A1nScarsella"
+      },
+      "src": "https://www.youtube.com/embed/O7KrOSwSdaw?si=jQ4o5Vx45Dvm1izu"
     },
     {
       "data": {
