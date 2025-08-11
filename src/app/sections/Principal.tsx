@@ -1,8 +1,8 @@
 'use client'
 
 import Image from 'next/image'
-import imagen_inicio from '..\..\..\public\foto_inicio.jpg'
-import music from '..\..\..\public\music.png'
+import imagen_inicio from '../../../public/foto_inicio.jpg'
+import music from '../../../public/music.png'
 
 const Principal = () => {
   const musicGenres = ['Rock', 'Metal', 'Pop', 'Música Latinoamericana']

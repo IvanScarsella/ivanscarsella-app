@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
-import javascript from '..\..\..\assets\icons\javascript_icon.png'
+import javascript from '../../../assets/icons/javascript_icon.png'
 
 const ProjectCard = ({ project }: any) => {
   const [loading, setLoading] = useState(true)
