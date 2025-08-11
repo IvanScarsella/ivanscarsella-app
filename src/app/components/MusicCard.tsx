@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { Button } from '@mui/material'
 import { red } from '@mui/material/colors'
-import YoutubeVideo from 'YoutubeVideo'
+import YoutubeVideo from './YoutubeVideo'
 import { useState, useEffect } from 'react'
 const MusicCard = ({ video }: any) => {
   const [loading, setLoading] = useState(true)

@@ -1,8 +1,8 @@
 'use client'
-import { programmingProjects } from '..\programmingConstants'
+import { programmingProjects } from '../programmingConstants'
 // import ProgrammingProject from '@/app/components/ProgrammingProject'
 import Image from 'next/image'
-import ProjectCard from '@\app\components\ProjectCard'
+import ProjectCard from '@/app/components/ProjectCard'
 import { useEffect, useState } from 'react'
 
 const ProgrammingSection = ({ programmingProjects }: any) => {
