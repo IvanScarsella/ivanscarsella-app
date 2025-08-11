@@ -5,9 +5,8 @@ import { usePathname, useRouter } from 'next/navigation'
 import { useState, useContext, Fragment } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import logo from '..\..\..\assets\images\ivanlogo_chico.png'
-// import ThemeContext from '@\app\components\context\themeContext'
-import ThemeContext from 'context\themeContext'
+import logo from '../../../assets/images/ivanlogo_chico.png'
+import ThemeContext from '@/app/components/context/themeContext'
 import { MdDarkMode, MdOutlineLightMode } from 'react-icons/md'
 
 const navigation = [
@@ -81,8 +80,8 @@ export default function Nav() {
                       // <Link key={item.name} href={item.href}>
                       (<a
                         className={`${pathname === item.href
-                            ? 'bg-red-700 text-white'
-                            : 'text-black hover:bg-gray-700 hover:text-white dark:text-gray-300'
+                          ? 'bg-red-700 text-white'
+                          : 'text-black hover:bg-gray-700 hover:text-white dark:text-gray-300'
                           } cursor-pointer rounded-md px-3 py-2 text-lg font-medium `}
                         aria-current={item.current ? 'page' : undefined}
                         onClick={() => router.push(item.href)}
