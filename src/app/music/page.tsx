@@ -2,10 +2,10 @@
 
 import React, { useEffect, useRef, useState } from 'react'
 import Nav from '../components/Nav'
-import MusicSection from './musicSection/page'
+// import MusicSection from 'musicSection/page'
 import Footer from '../sections/Footer'
 import Spotify from '../components/Spotify'
-import { fetchVideos } from './musicConstants'
+// import { fetchVideos } from 'musicConstants'
 import axios from 'axios'
 import { ArrowLeftIcon, PlayIcon } from '@heroicons/react/solid'
 import Image from 'next/image'

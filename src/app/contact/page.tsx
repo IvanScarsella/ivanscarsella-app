@@ -1,12 +1,12 @@
-import Nav from '../components/Nav'
-import Contact from './contactForm/Contact'
-import Footer from '../sections/Footer'
+import Nav from '..\components\Nav'
+import Contact from 'contactForm\Contact'
+import Footer from '..\sections\Footer'
 import Image from 'next/image'
-import microphone from '../../../public/microphone.png'
-import music from '../../../public/music.png'
-import pizarron from '../../../public/pizarron.png'
-import tienda from '../../../public/tienda.png'
-import maletin from '../../../public/maletin.png'
+import microphone from '..\..\..\public\microphone.png'
+import music from '..\..\..\public\music.png'
+import pizarron from '..\..\..\public\pizarron.png'
+import tienda from '..\..\..\public\tienda.png'
+import maletin from '..\..\..\public\maletin.png'
 
 const ContactPage = () => {
   const programmingServices = [

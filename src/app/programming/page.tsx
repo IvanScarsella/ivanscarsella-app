@@ -1,7 +1,7 @@
 'use client'
 
 import Nav from '../components/Nav'
-import ProjectsSection from './programmingSections/ProjectsSection'
+// import ProjectsSection from 'programmingSections/ProjectsSection'
 import Footer from '../sections/Footer'
 import { fetchProjects } from '../music/musicConstants'
 import { useEffect, useState } from 'react'

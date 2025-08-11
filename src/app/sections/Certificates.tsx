@@ -1,10 +1,10 @@
 import Image from 'next/image'
-import imagen1 from '../../../public/certificates/Licenciatura.png'
-import imagen2 from '../../../public/certificates/Profesorado.png'
-import imagen3 from '../../../public/certificates/Henry.png'
-import imagen4 from '../../../public/certificates/Certificado Responsive Web Design - FreeCodeCamp.png'
-import imagen5 from '../../../public/certificates/JavaScript Algorithms and Data Structures - FreeCodeCamp.png'
-import imagen6 from '../../../public/certificates/Data Visualization - FreeCodeCamp.png'
+import imagen1 from '..\..\..\public\certificates\Licenciatura.png'
+import imagen2 from '..\..\..\public\certificates\Profesorado.png'
+import imagen3 from '..\..\..\public\certificates\Henry.png'
+import imagen4 from '..\..\..\public\certificates\Certificado Responsive Web Design - FreeCodeCamp.png'
+import imagen5 from '..\..\..\public\certificates\JavaScript Algorithms and Data Structures - FreeCodeCamp.png'
+import imagen6 from '..\..\..\public\certificates\Data Visualization - FreeCodeCamp.png'
 
 const Certificates = () => {
   const images = [
