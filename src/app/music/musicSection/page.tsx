@@ -1,6 +1,6 @@
 'use client'
 
-import MusicCard from '@/app/components/MusicCard'
+import MusicCard from '../../components/MusicCard'
 // import { Button } from '@mui/material'
 import { useState, useEffect } from 'react'
 

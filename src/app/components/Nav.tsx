@@ -6,7 +6,7 @@ import { useState, useContext, Fragment } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import logo from '../../../assets/images/ivanlogo_chico.png'
-import ThemeContext from '@/app/components/context/themeContext'
+import ThemeContext from './context/themeContext'
 import { MdDarkMode, MdOutlineLightMode } from 'react-icons/md'
 
 const navigation = [
