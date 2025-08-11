@@ -154,8 +154,8 @@ const page = () => {
           ))}
         </div>
         <div className='flex flex-row flex-wrap justify-around gap-5 mx-[100px] mt-20'>
-          {displayedProjects.map(project => (
-            <ProjectCard project={project} />
+          {displayedProjects.map((project, index) => (
+            <ProjectCard project={project} key={index} />
           ))}
         </div>
         <Footer />

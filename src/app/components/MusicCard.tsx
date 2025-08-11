@@ -19,7 +19,7 @@ const MusicCard = ({ video }: any) => {
       {loading ? (
         <div className='loader'></div>
       ) : (
-        <div className='flex flex-row max-md:flex-col h-full w-full border-2 border-[#D3CFCF] rounded-2xl max-md:p-4 mx-10'>
+        (<div className='flex flex-row max-md:flex-col h-full w-full border-2 border-[#D3CFCF] rounded-2xl max-md:p-4 mx-10'>
           <div className='ease-500  rounded-3xl transition-all  w-3/5 max-md:w-full'>
             <iframe
               // width={624}
@@ -47,7 +47,7 @@ const MusicCard = ({ video }: any) => {
               </button>
             </a>
           </div>
-        </div>
+        </div>)
         // <div className='ease-500 flex w-10/12 flex-row flex-wrap items-center justify-between rounded-3xl border-4 border-black bg-opacity-10 bg-gradient-to-r from-red-800 to-white p-4 transition-all hover:scale-110 hover:shadow-2xl dark:border-neutral-500 dark:from-black dark:to-red-800 max-xl:w-full max-xl:flex-col'>
         //   <div className='ease-500 ml-24 rounded-3xl bg-gradient-to-l from-red-800 to-white transition-all hover:scale-110 hover:shadow-2xl dark:from-black dark:to-red-800 max-2xl:ml-0 max-xl:w-10/12'>
         //     <YoutubeVideo key={video.data} src={video.src.toString()} />
@@ -82,7 +82,7 @@ const MusicCard = ({ video }: any) => {
         // </div>
       )}
     </>
-  )
+  );
 }
 
 export default MusicCard

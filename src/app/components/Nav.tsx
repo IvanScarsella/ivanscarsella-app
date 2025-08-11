@@ -78,7 +78,7 @@ export default function Nav() {
                   <div className='font-palanquin flex space-x-20 tracking-wide '>
                     {navigation.map((item) => (
                       // <Link key={item.name} href={item.href}>
-                      <a
+                      (<a
                         className={`${
                           pathname === item.href
                             ? 'bg-red-700 text-white'
@@ -89,7 +89,7 @@ export default function Nav() {
                         key={item.name}
                       >
                         {item.name}
-                      </a>
+                      </a>)
                       // </Link>
                     ))}
                   </div>
@@ -154,5 +154,5 @@ export default function Nav() {
         </>
       )}
     </Disclosure>
-  )
+  );
 }

@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Iván Scarsella - Desarrollador Web - Músico',
-  description: 'Desarrollador experto en la creación de sitios web personalizados. Músico con amplia experiencia en diversos estilos musicales. En esta página encontrarás todo mi trabajo en ambas ramas. Si necesitás cualquiera de mis servicios, no dudes en contactarme. ',
+  description: 'Desarrollador experto en la creación de sitios web personalizados. Músico con amplia experiencia en diversos estilos musicales. En esta página encontrarás todo mi trabajo en ambas ramas. Si necesitás cualquiera de mis servicios, no dudes en contactarme. '
 };
 
 export default function RootLayout({

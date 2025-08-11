@@ -143,7 +143,7 @@ const Page = () => {
             className='w-1/2 max-lg:w-full'
           >
             {images.map((image, index) => (
-              <div className='w-full h-[331px] max-sm:h-60'>
+              <div className='w-full h-[331px] max-sm:h-60' key={index}>
                 <Image src={image.src} alt={image.alt} width={1500} height={1000} className='container w-full h-[331px] max-sm:h-60' />
               </div>
             ))}
@@ -158,7 +158,9 @@ const Page = () => {
               key={band.name}
               className={`w-96 h-auto max-md:w-full max-md:h-72  border border-[#BD1717] p-4 max-md:p-2 hover:scale-110 cursor-pointer ${selectedBand === band.name ? 'scale-[1.1] shadow-lg shadow-[#BD1717aa]' : null} ease-500 transition-all`}
               onClick={() => setSelectedBand(band.name)}
-              ref={el => (logoRefs.current[index] = el)}
+              ref={el => {
+                (logoRefs.current[index] = el);
+              }}
               data-name={band.name}
               title={band.name}
             >
@@ -266,7 +268,7 @@ const Page = () => {
       </section>
       <Footer />
     </>
-  )
+  );
 }
 
 export default Page
